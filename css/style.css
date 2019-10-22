@@ -149,19 +149,19 @@ button:hover{
 }
 
 #shoeLeftHeaderImg{
-    width: 40% !important;
+    width: 20vw !important;
     transform: rotate(185deg);
     margin: 0 auto;
     left: 13vw;
-    bottom: 4vw;
+    bottom: 5vw;
     z-index: 3;
 }
 
 #shoeRightHeaderImg{
-    width: 43% !important;
+    width: 18vw !important;
     transform: rotate(135deg);
     margin: 0 auto;
-    right: 6vw;
+    right: 8vw;
     top: 1vw;
     z-index: 3;
 }

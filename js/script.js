@@ -32,8 +32,8 @@ window.onload = () =>{
 var scene = document.querySelector('#headerLogoBox');
 var parallaxInstance = new Parallax(scene);
 
-var scene = document.querySelector('#headerImgBox');
-var parallaxInstance = new Parallax(scene);
+var scene2 = document.querySelector('#headerImgBox');
+var parallaxInstance2 = new Parallax(scene2);
 
 var prevScrollPos = 0;
 var scrollCount = 0;
