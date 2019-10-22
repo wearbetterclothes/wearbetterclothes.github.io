@@ -32,6 +32,9 @@ window.onload = () =>{
 var scene = document.querySelector('#headerLogoBox');
 var parallaxInstance = new Parallax(scene);
 
+var scene = document.querySelector('#headerImgBox');
+var parallaxInstance = new Parallax(scene);
+
 var prevScrollPos = 0;
 var scrollCount = 0;
 var scrollUp = false;
@@ -151,14 +154,14 @@ const humanCostChangeColour1= new ScrollMagic.Scene({
 
 
 humanCostPin
-.from("#humanCostImgGrid", 0.8, {y: "-50vw"})
-.to("#humanCostImgGrid", 0.7, {y: "50vw"});
+.to("#humanCostImgGrid", 1, {y: "110vw"})
 
 
 const humanCostPinScene = new ScrollMagic.Scene({
     triggerElement: "#humanText1",
     triggerHook: 0,
-    duration: "200%"
+    ease: Power0.easeNone,
+    duration: "300%"
 })
 .setTween(humanCostPin)
 .addTo(controller)
@@ -670,7 +673,7 @@ const massProduceScene = new ScrollMagic.Scene({
 
 
 
-massProducePin.to('#shirtsImg1', 315, {y: -1800}, "first")
+massProducePin.to('#shirtsImg1', 315, {y: -2500}, "first")
 .from('#massProducedText', 1, {opacity: 0}, "first")
 .from('#bagImg', 85, {y: 700}, "=-100.5")
 .from('#massPurchasedText', 1, {opacity: 0}, "=-80.5")
@@ -703,23 +706,23 @@ const pinMassProduceScene = new ScrollMagic.Scene({
 
 
 
-newFashion.to("#crownImg", 2, {y:-180})
-.to("#necklaceImg", 2, {y:-280}, )
-.to("#ringImg", 2, {y:-380})
-.to("#oldFashionText", 2, {y:-480})
+newFashion.to("#crownImg", 1, {y:-480}, "first")
+.to("#necklaceImg", 1, {y:-380}, "first")
+.to("#ringImg", 1, {y:-280}, "first")
+.to("#oldFashionText", 2, {y:-480}, "first")
+.from('#hatImg', 0.5, {opacity: 0}, "=-0.5")
+.from('#hatImg', 1, {y: -300}, "=-0.5")
+.from("#ringNewImg", 0.5, {opacity: 0}, "=-0.5")
+.from("#ringNewImg", 1, {y: -250}, "=-0.5")
+.from("#necklaceNewImg", 0.5, {opacity: 0}, "=-0.5")
+.from("#necklaceNewImg", 1, {y: -250}, "=-0.5");
 
-.from("#hatImg", 3, {y:-320}, "=-5")
-.from("#hatImg", 0.5, {opacity: 0}, "=-5")
-.from("#necklaceNewImg", 3, {y:-280}, "=-5.5")
-.from("#necklaceNewImg", 0.5, {opacity: 0}, "=-5.5")
-.from("#ringNewImg", 3, {y:-280}, "=-6")
-.from("#ringNewImg", 0.5, {opacity: 0},"=-6");    
 
 
 const newFashionScene = new ScrollMagic.Scene({
     triggerElement: "#newFashion",
     triggerHook: 1,
-    duration: "200%"
+    duration: "100%"
 })
 .setTween(newFashion)
 .addTo(controller)
@@ -743,12 +746,7 @@ const pinNewFashionScene = new ScrollMagic.Scene({
 
 
 oldFashion.to("#introText", 0.25, {y: -250}, "first")
-.from("#crownImg", 1, {y:-280}, 0.2)
-.from("#crownImg", 0.75, {opacity: 0}, 0.2)
-.from("#necklaceImg", 1, {y:-320}, 0.25)
-.from("#necklaceImg", 0.75, {opacity: 0}, 0.2)
-.from("#ringImg", 1, {y:-340}, 0.25)
-.from("#ringImg", 0.75, {opacity: 0}, 0.2);    
+.from("#crownImg", 1, {y:-280}, "first");  
 
 const oldFashionScene = new ScrollMagic.Scene({
     triggerElement: "#oldFashion",
@@ -759,7 +757,9 @@ const oldFashionScene = new ScrollMagic.Scene({
 .addTo(controller)
 .addIndicators({name: "old fashion scene"});
 
-oldFashionPin.from('#oldFashionText', 1, {y:80});
+oldFashionPin.from('#oldFashionText', 1, {y:80}, "first")
+
+;
 
 const pinOldFashionScene = new ScrollMagic.Scene({
     triggerElement: "#oldFashion",
@@ -782,6 +782,7 @@ const pinOldFashionScene = new ScrollMagic.Scene({
 
 intro.from("#introText", 0.4, {y: -200}, "first")
 .from("#introText", 1, {opacity: 0}, "first")
+
 
 
 
@@ -813,7 +814,12 @@ const pinIntroScene = new ScrollMagic.Scene({
 
 
 header.to("body", 1, {backgroundColor: "#D92608"}, "first")
-.to("#headingAndButtonsBox", 1, {y: -200}, "first");
+.to("#headingAndButtonsBox", 1, {y: -200}, "first")
+.to("#jeansHeaderImg", 1, {y: -500}, "first")
+.to("#shirtHeaderImg", 1, {y: -1200}, "first")
+.to("#sweaterHeaderImg", 1, {y: -400}, "first")
+.to("#necklaceHeaderImg", 1, {y: -200}, "first")
+;
 
 
 const headerScene = new ScrollMagic.Scene({

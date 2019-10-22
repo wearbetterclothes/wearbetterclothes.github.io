@@ -44,7 +44,7 @@ body{
     background-color: #8500ff;
 
     overflow-x: hidden;
-    /*overflow-y: hidden;*/
+    overflow-y: hidden;
 }
 
 section{
@@ -109,10 +109,88 @@ button:hover{
 
 /*-------------------------------------------------------header stuff----------------------------------------------------------*/
 
+#headerImgBox{
+    z-index: -2;
+    position: absolute;
+    width: 100vw;
+}
+
+#headerImgBox img {
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+#jeansHeaderImg{
+    width: 40% !important;
+    transform: rotate(-10deg);
+    margin: 0 auto;
+    left: 73vw !important;
+    top: 15vw !important;
+    z-index: 2;
+}
+
+#sweaterHeaderImg{
+    width: 40% !important;
+    transform: rotate(20deg);
+    margin: 0 auto;
+    right: 18vw;
+    top: 12vw;
+    z-index: -2;
+}
+
+#necklaceHeaderImg{
+    width: 30vw !important;
+    transform: rotate(155deg);
+    margin: 0 auto;
+    left: 2vw;
+    top: 2vw;
+    z-index: 4;
+}
+
+#shoeLeftHeaderImg{
+    width: 40% !important;
+    transform: rotate(185deg);
+    margin: 0 auto;
+    left: 13vw;
+    bottom: 4vw;
+    z-index: 3;
+}
+
+#shoeRightHeaderImg{
+    width: 43% !important;
+    transform: rotate(135deg);
+    margin: 0 auto;
+    right: 6vw;
+    top: 1vw;
+    z-index: 3;
+}
+
+#shirtHeaderImg{
+    width: 40vw !important;
+    transform: rotate(-40deg);
+    margin: 0 auto;
+    left: 69vw;
+    bottom: 2vw;
+    z-index: -3;
+}
+
+#ringHeaderImg{
+    width: 10% !important;
+    transform: rotate(-15deg);
+    margin: 0 auto;
+    left: 80vw !important;
+    top: 1vw !important;
+    z-index: 3;
+}
+
+
+
 header{
     height: 100vh;
     display: grid;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 50% 50%;
+    position: relative;
 }
 
 #headerLogoBox{
@@ -469,7 +547,7 @@ video{
 
 
 #headerLogoImg{
-    margin-top: 8vw;
+    margin-top: 15vw;
 }
 
 .jsgif canvas{
@@ -771,6 +849,7 @@ video{
     grid-template-rows: 1fr;
     width: 100vw;
     position: absolute;
+    bottom: 120vw;
 }
 
 #humanCostImgGrid img{
