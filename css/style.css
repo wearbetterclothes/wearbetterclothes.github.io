@@ -1,0 +1,763 @@
+@font-face{
+    font-family: "Altero";
+    src: url("font/Altero.otf");
+}
+
+.preload{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #77b3b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+    flex-direction: column;
+    padding-bottom: 30vh;
+}
+
+.preload img{
+    width: 70vw;  
+    height: auto; 
+    margin: 0 auto; 
+
+    position: relative;
+    bottom: 12vh;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    
+    background-color: #8500ff;
+
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+}
+
+section{
+    height: 100vh !important;
+    display: flex;
+    
+    justify-content: center;
+}
+
+
+
+img{
+    width: auto;
+    height: 100%;
+}
+
+h2, h1, h3, button, h4{
+    font-family: 'Altero';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2{font-size: 2vw; line-height: 3vw;}
+
+h1{font-size: 3vw; line-height: 5vw; margin: 0}
+
+h3{ font-size: 1.5vw;}
+
+h4{font-size: 8vw; margin: 0 2vw;}
+
+button{
+    height: 3.5vw;    
+    background-color: transparent;
+    border: 0.2vw solid black;
+    border-radius: 80px;
+    font-size: 1.1vw;
+    padding-bottom: 0.4vw;
+}
+
+button:hover{
+    box-shadow: 0px 8px 12px 0 rgba(0,0,0,0.44);
+}
+
+
+
+
+
+.sectionContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 11vw;
+}
+
+.text-center{
+    text-align: center;
+    flex-direction: column;
+    margin: 0 15vw;
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------header stuff----------------------------------------------------------*/
+
+header{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+#headerLogoBox{
+    margin: 0 20vw;
+}
+
+#headerLogoBox img{
+    width: 100%;
+    height: auto;
+}
+
+#headingAndButtonsBox{
+    margin-top: 8vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 2fr;
+    margin-bottom: 3vw;
+}
+
+#buttonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 6vw;
+}
+
+#buttonBox button{
+    width: 60%;
+    margin: 0 1vw;
+}
+
+
+
+
+
+#introSection{
+    height: 100vh;
+}
+
+
+.scrollmagic-pin-spacer{
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------------------------------------------------content margins-------------------------------------------------------*/
+
+#fiberVideo{
+    height: 150vh !important;
+}
+
+.overlap-contents * {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#waterIntro{
+    z-index: 20;
+}
+
+#dyeText1, #dyeText4{
+    z-index: 1;
+
+    margin: 0 auto;
+    width: 60vw;
+    color: #6EC3D5;
+}
+
+#dyeText1{
+    margin-bottom: 17vw;
+}
+
+#dyeText2, #dyeText3{
+    z-index: 1;
+
+    margin: 0 auto;
+    width: 60vw;
+    margin-bottom: 7vw;
+    color: rgb(231, 107, 255);
+}
+
+#dyeText2{
+    width: 75vw;
+}
+
+#dyeSection{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+}
+
+#polyesterSection{
+    position: relative;
+    z-index: -5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#polyester{
+    height:150vh;
+    margin-bottom: 15vw !important;
+}
+
+#polyesterText{
+    position: relative;
+    bottom: 21vw;
+    margin: 0 17vw;
+}
+
+
+#threeYearsWaterGrid{
+    display: grid;
+    grid-template-columns: 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25%;
+    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;
+    width: 90%;
+    height: 90%;
+    margin: 5vh 0;
+}
+
+
+
+#glassesGrid{
+    display: grid;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    height: 50vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#glassesGrid img, #threeYearsWaterGrid img{
+    width: 200%;
+    height: auto;
+    margin: -50% -50%;
+}
+
+#cottonGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50vh;
+    margin-top: 20vh;
+    z-index: -2;
+}
+
+#massProduce{
+    margin-bottom: 30vw !important;
+}
+
+#co2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#co2Section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+video{
+    min-height: 114vh;
+    max-height: 150vh;
+    min-width: 100vw;
+    z-index: -20;
+}
+
+@media only screen and (max-height: 600px) {
+    video{
+        max-height: 100vw;
+    }
+  }
+
+#co2Text3{
+    font-size: 24vw;
+    margin-top: -7vw;
+    color: rgb(197, 4, 31);
+}
+
+#co2Text4{
+    word-spacing: 2vw;
+    letter-spacing: 0.1vw;
+}
+
+#threeThingsCo2{
+    z-index: 10;
+    position: relative;
+}
+
+#threeThingsCo2Grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 1vw 2vw;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/*-------------------------------------------------------text colour ------------------------------------------------------------*/
+.overlap-contents{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;;
+}
+
+#threeYearsText{
+    grid-row: 3/5;
+    grid-column: 3/15;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introText{ 
+    color: rgb(213, 86, 200);
+}
+
+.red-text{ 
+    color: #D92608;
+}
+
+.orange-text{ 
+    color: #FB5430;
+}
+
+.blue-text{
+    color: #6EC3D5;
+}
+
+.yellow-text{
+    color: yellow;
+}
+
+#questionEvolveText1{
+    color:orangered;
+    font-weight: 400;
+    text-shadow: 4px 4px #8f0000;
+}
+
+#impact h1{
+    color: white;
+    font-size: 2.6vw;
+}
+
+
+#oldFashionText{
+    margin-bottom: 10vw;
+}
+
+#defineFFSection{
+}
+
+
+#defineFFText3{
+    margin: 3vw 0 1vw;
+    margin-right: 55vw;
+}
+
+#defineFFText4{ 
+    margin-top: -5vw;
+    margin-left: 10vw;
+    text-align: left;
+    
+    margin-bottom: 3vw;
+}
+
+#defineFFText5{
+    margin-right: 58vw;
+    display: inline;
+}
+
+#questionEvolveText1{
+    margin: 0 80vh;
+
+}
+
+#hugeText{
+    margin-top: 3vw;
+}
+
+#co2Heading, #smokeVideo, #co2Text{
+    z-index: -2;
+}
+
+#co2Heading, #co2Text{
+    z-index: 1;
+    color: white;
+    bottom: 5vw;
+    position: relative;
+}
+
+
+
+#threeThingsCo2Text{
+    margin-bottom: 5vw;
+}
+
+#ATonneText{
+    margin-bottom: 3vw;
+    font-size: 12.5vw;
+}
+
+#waterTitle, #waterText{
+    z-index: 1;
+    color: #0b1e71;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+#waterText{
+    bottom: 5vw;
+}
+
+#waterTitle{
+    bottom: 10vw;
+}
+
+#waterImg{
+    min-width: 120vw;
+    height: auto;
+
+}
+
+
+#waterText{
+    width: 55vw;
+}
+
+#cottonWaterText{
+    position: relative;
+    bottom:1vh;
+    z-index: -20;
+    width: 80vw;
+}
+
+/*--------------------------------------------------------content images--------------------------------------------------------*/
+
+
+#headerLogoImg{
+    margin-top: 8vw;
+}
+
+.jsgif canvas{
+    filter: contrast(1.5) brightness(0.7) saturate(2);
+    width: auto;
+    height: 100vh;
+}
+
+.imageLeftTextRight{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+    
+}
+
+.imageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLeftTextRight .imageBox{
+    width: 45vw;
+    height: 100vh;
+}
+
+
+.imageBox img{
+    position: relative;
+    display: inline-block;
+    height: auto;
+}
+
+
+
+/* -----------------------old fashion-----------------------*/
+
+#crownImg{
+    width: 40vw;
+    bottom: 5vw;
+    left: 15vw;
+}
+
+#necklaceImg{
+    width: 25vw;
+    right: 20vw;
+    top: 14vw;
+}
+
+#ringImg{
+    width: 12vw;
+
+    top: 8vw;
+    right: 25vw;
+}
+
+
+/* -----------------------new fashion-----------------------*/
+
+
+#hatImg{
+    width: 35vw;
+    left: 14vw;
+    bottom: 3vw;
+    z-index: 1;
+}
+
+#ringNewImg{
+    width: 10vw;
+
+    right: 21vw;
+    top: 8vw;
+
+    z-index: 2;
+}
+
+#necklaceNewImg{
+    width: 26vw;
+    right: 15vw;
+    top: 5vw;
+
+    z-index: 0;
+}
+
+
+/* -----------------------mass produced-----------------------*/
+
+
+#shirtsImg1, #shirtsImg2, #shirtsImg3{
+    width: 40vw;
+    
+}
+
+#shirtsImg1{left: 111vw;top: 40vw;}
+#shirtsImg2{left: 71vw; bottom: 100vw; opacity: 0}
+#shirtsImg3{left: 31vw; bottom: 100vw; opacity: 0}
+
+#bagImg{
+    width: 55vw;
+
+    right: 16vw;
+    top: 25vw;
+}
+
+#binImg{
+    width: 47.5vw;
+    top: 25vw;
+    right: 67.5vw;
+}
+
+#binLidImg{
+    width: 49.5vw;
+    bottom:4vw;
+    right: 115.5vw;
+}
+
+
+/*--------------------------co2-------------------------*/
+
+#clouds{
+    position: relative;
+}
+
+.clouds{
+    position: absolute;
+}
+
+#cloud1{
+    right: 65vw;
+    top: 0vw;
+    height: 110vh;
+}
+
+#cloud2{
+    left: 10vw;
+    top: 0vw;
+    opacity: 0.5;   
+    height: 120vh;
+}
+
+#cloud3{
+    bottom:0vh;
+    z-index: 4;
+    left: 30vh;
+    filter: brightness(1.8);
+    height: 100vh;
+}
+
+#cloud4{
+    left: 30vw;
+    top:0vw;
+    height: 100vh;
+}
+
+#cloud5{
+    filter: brightness(0.1);
+    bottom: 0vh;
+    right: 30vh;
+    height: 100vh;
+}
+
+#cloud7 {
+    top: -90vh;
+    filter: brightness(0.1);
+    height: 130vh;
+}
+
+#cloud8 {
+    bottom: 0vh;
+    left: 30vh;
+    height: 140vh;
+    filter: brightness(0.1);
+}
+
+
+#cloud9 {
+    bottom: 100vh;
+    right: 10vh;
+    filter: brightness(0.05);
+    height: 100vh;
+}
+
+
+/*-------------------------------------------- co2p2 --------------------------------------*/
+
+#clothingLabel{
+    width: auto;
+    bottom: 10vw;
+    height: 100vw;
+    z-index: -20;
+}
+
+#sewingImg{
+    width: 33vw;
+    height: auto;
+}
+
+#truckImg{
+    width: 24vw;
+    height: auto;
+    margin-left: 2.5vw;
+}
+
+#washImg{
+    width: 13vw;
+    height: auto;
+}
+
+
+#cottonImg1, #cottonImg3{
+    transform: rotate(-10deg);
+}
+
+#cottonImg2, #cottonImg4{
+    transform: scaleX(-1);
+    z-index: 1;
+    position: relative;
+}
+
+#cottonImg2{
+    transform: scaleX(-1) rotate(-40deg);
+}
+
+#fiberSection img{
+    position: relative;
+}
+
+#fiber1{
+    right: 5vw;
+    z-index: -2;
+}
+
+#fiber2{
+    left: 80%;
+    top: 10vw;
+    transform: rotate(180deg);
+    z-index: -2;
+    float: right;
+}
+
+#fiber-floaty-1{
+    left: 65vw; 
+    top: 30vw;
+}
+
+#fiber-floaty-2{
+    left: 65vw; 
+    top: 30vw;
+}
+
+#fiber-floaty-3{
+    right: 15vw; 
+    top: 15vw;
+    opacity: 0.7;
+    z-index: -2;
+}
+
+#fiberText1{
+    width: 70vw;
+    margin: 0 auto;
+}
+
+#fiberText2{
+    position: relative;
+
+    width: 60vw;
+    margin: 0 auto;
+}
+
+#humanCostSection h1{
+    width: 60vw;
+    color: rgb(231, 107, 255);
+    margin-bottom: 15vw;
+}
+
+#humanCostSection h4{
+    color: rgb(231, 107, 255);
+}
+
+#humanCostSection{
+    margin-top: 100vw;
+}
+
+
+
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}

@@ -1,0 +1,377 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="preload">
+            <img  id="headerLogoImg" src="images/logo-shadow.png">
+            <h2 >[insert cool sentence for loading screen here]</h2>
+        </div>
+
+        <header>
+            <div id="headerLogoBox" class="sectionContents">
+                <img data-depth="0.2" id="headerLogoImg" src="images/logo-shadow.png">
+            </div>
+            <div id="headingAndButtonsBox" class="sectionContents">
+                <h2>IT'S TIME TO LEARN ABOUT FAST FASHION</h2>
+                <div id="buttonBox">
+                    <button onclick="scrollDown()">OK Teach me!</button>
+                    <BUTTON>I already know!</BUTTON>
+                </div>
+            </div>
+        </header>
+        
+        <section id="introSection" >
+            <div class="sectionContents text-center">
+                <h1 id="introText">before we wear better clothes,  <br>we must know why better clothes<h1>
+            </div>
+        </section>
+        <section id="oldFashion" >
+            <div class="sectionContents imageLeftTextRight">
+                <div class="imageBox">
+                    <img id="crownImg"src="images/item/crown.png">
+                    <img id="ringImg"src="images/item/ring-medival.png">
+                    <img id="necklaceImg" src="images/item/necklace-medival.png">
+                </div>
+                <div id="oldFashionText" class='orange-text'>
+                    <h2>From a time where fashion was only for the wealthy and privileged, </h2>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="newFashion">
+            <div class="sectionContents imageLeftTextRight">
+                <div class="imageBox" >
+                    <img id="hatImg"src="images/item/hat.png">
+                    <img id="ringNewImg"src="images/item/rings-new.png">
+                    <img id="necklaceNewImg" src="images/item/necklace.png">
+                </div>
+                <div id="newFashionText" class='orange-text'>
+                    <h2>we have <span style="text-transform: lowercase">advanced</span> to where we can buy trendy outfits </h2>
+                    <h2 id="fashionStraightText">  straight off the runway, straight away!</h2>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="massProduce">
+            <div class="sectionContents imageLeftTextRight">
+                <div class="imageBox" >
+                    <img id="shirtsImg1"src="images/item/shirts.png">
+                    <img id="shirtsImg2"src="images/item/shirts.png">
+                    <img id="shirtsImg3"src="images/item/shirts.png">
+                    <img id="bagImg"src="images/item/plastic-bag.png">
+                    <img id="binImg" src="images/item/bin-bottom.png">
+                    <img id="binLidImg" src="images/item/bin-lid.png">
+                </div>
+                <div class='orange-text'>
+                    <h2>With today's <span style="text-transform: lowercase">revolutionary</span> technology, <br> clothes are: </h2>
+                    <h2 id="massProducedText">  mass produced,</h2>
+                    <h2 id="massPurchasedText">  mass purchased,</h2>
+                    <h2 id="massAndText">  &</h2>
+                    <h2 id="massBinText">  mass - put in the bin</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="defineFF">
+            <div id="defineFFSection" class="blue-text sectionContents text-center">
+                <h1 id="defineFFText1">This is what is defined as</h1>
+                <h4 id="defineFFText2">FAST FASHION</h4>
+                <h2 id="defineFFText3">Noun</h2>
+                <h1 id="defineFFText5">1.</h1>
+                <h1 id="defineFFText4">Inexpensive clothing produced rapidly in response to the latest trends. </h1>
+                
+            </div>
+        </section>
+
+        <section id="questionEvolve">
+            <div class="sectionContents text-center">
+            <img id="earthGif" src="images/item/earth.gif" width="20vw" height="auto" rel:animated_src="images/item/earth.gif" rel:auto_play="0" >
+                <h1 id="questionEvolveText1">is it really a good <span style="text-transform: lowercase ; font-weight: 600; font-size: 9vw">change</span>
+                    if it is at the cost of our environment?</h1>
+                
+            </div>
+        </section>
+
+        <section id="impact">
+            <div class=" sectionContents text-center" id="impactText">
+                <h1>Fast Fashion's impact on the planet is </h1>
+                <h1 id="hugeText"><span style="font-size: 21.68vw">HUGE</span></h1>
+            </div>
+        </section>
+
+        <div class="sectionContents text-center" id="clouds">
+            <img id="cloud4" class="clouds" src="images/item/cloud2.png">
+            <img id="cloud1" class="clouds" src="images/item/cloud.png">
+            <img id="cloud2" class="clouds" src="images/item/cloud4.png">
+
+            <img id="cloud3" class="clouds" src="images/item/cloud3.png">
+            <img id="cloud5" class="clouds" src="images/item/cloud5.png">
+
+            <img id="cloud7" class="clouds" src="images/item/cloud2.png">
+            <img id="cloud8" class="clouds" src="images/item/cloud.png">
+            <img id="cloud9" class="clouds" src="images/item/cloud4.png">
+        </div>
+
+        <section id="co2">
+            <div id="co2Section" class="overlap-contents">
+                <video autoplay muted loop id="smokeVideo">
+                    <source src="images/item/smoke.mp4" type="video/mp4">
+                </video>
+
+                <h4 id="co2Heading" style="color: white">CO2 EMISSION</h4>
+
+                <div id="co2Text">
+                    <h2 id="co2Text2">the apparel industry accounts for</h2>
+                    <h4 id="co2Text3">10%</h4>
+                    <h2 id="co2Text4">of <span id="global" style="color: rgb(197, 4, 31);"> global</span>  carbon  emissions</h2>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="polyester">
+            <div id="polyesterSection" style="margin: 0 7vw; " class="sectionContents text-center red-text">
+                <div style="grid-row: 1; grid-column: 1;" class="imageBox">
+                    <img id="clothingLabel"src="images/item/label.png">
+                </div>
+                
+                <div id="polyesterText" style="grid-row: 1; grid-column: 1;">
+                    <h4 id=>POLYESTER</h4>
+                    <h2 style="margin: 5vh 17vw">a synthetic petroleum-based fabric that dominates our closets. <br><br> In 2015, production of polyester for textiles 
+                        use results in more than </h2>
+                    <h4  id="seven06Billion"style="margin-top:-1vw;"><span>706</span> billion<br> kg of CO2.</h4>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="threeThingsCo2">
+            <div class="sectionContents text-center red-text">
+                <h1 id="threeThingsCo2Text"><span id="productionText">production,</span> <span id="transportationText">transportation</span> 
+                    <span id="andText">& </span> <span id="maintenanceText">maintenance</span> <span id="ofClothingText">of clothing</span> </h1>
+                <div id="threeThingsCo2Grid" >
+                    <div class="imageBox">
+                        <img id="sewingImg" src="images/item/sewing_machine_PNG18.png">
+                    </div>
+                    <div class="imageBox">
+                        <img id="truckImg" src="images/item/truck.png">
+                    </div>
+                    <div class="imageBox">
+                        <img id="washImg" src="images/item/washingmachine.png">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="addsUpToCo2">
+            <div class="sectionContents text-center red-text" id="addsUpToCo2Text">
+                <h1 style="word-spacing: 1.2vw;">adds up to an average of</h1>
+                <h4 id="ATonneText">1 TONNE</h4>
+                <h1 id="perPersonCo2Text">of co2 per person, per year</h1>
+            </div>
+        </section>
+        
+
+        <section id="waterIntro">
+            <div class="sectionContents text-center overlap-contents"  id="waterSection">
+                <h4 id="waterTitle">Water</h4>
+                <h1 id="waterText">One key ingredient that doesn't show up on your cotton shirt's label</h1>
+                <img src="images/item/water2.png" id="waterImg">
+                
+            </div>
+            
+        </section>
+
+        <section id="cottonWater" >
+            <div class="sectionContents text-center">
+                <h1 id="cottonWaterText" style="color:#3945E7">although cotton sounds like an eco friendly option, it takes <span id="soManyLiters">2,700 liters</span> to produce
+                       a  <span id="singleCottonShirt" >single cotton t-shirt</span></h1>
+                <div id="cottonGrid" class="grid">
+                    <img id="cottonImg1" src="images/item/cotton1.png">
+                    <img id="cottonImg2" src="images/item/cotton2.png">
+                    <img id="cottonImg4" src="images/item/cotton1.png">
+                    <img id="cottonImg3" src="images/item/cotton2.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="drinkingWater">
+            <div class="sectionContents text-center">
+                <h1 style="color:#3945E7">That's enough for <span id="onePerson">one person</span> to drink <span id="eightGlasses"> 8 glasses of water a day</span></h1>
+                <div id="glassesGrid">
+                    <img id="cup1" src="images/item/cup.png">
+                    <img id="cup2" src="images/item/cup.png">
+                    <img id="cup3" src="images/item/cup.png">
+                    <img id="cup4" src="images/item/cup.png">
+                    <img id="cup5" src="images/item/cup.png">
+                    <img id="cup6" src="images/item/cup.png">
+                    <img id="cup7" src="images/item/cup.png">
+                    <img id="cup8" src="images/item/cup.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="threeYearsWater">
+            <div id="threeYearsWaterGrid">
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup3" src="images/item/cup.png">
+                <img class="miniCup4" src="images/item/cup.png">
+                <img class="miniCup5" src="images/item/cup.png">
+                <img class="miniCup6" src="images/item/cup.png">
+                <img class="miniCup7" src="images/item/cup.png">
+                <img class="miniCup8" src="images/item/cup.png">
+                <img class="miniCup9" src="images/item/cup.png">
+                <img class="miniCup10" src="images/item/cup.png">
+                <img class="miniCup11" src="images/item/cup.png">
+                <img class="miniCup12" src="images/item/cup.png">
+                <img class="miniCup13" src="images/item/cup.png">
+                <img class="miniCup14" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup3" src="images/item/cup.png">
+                <img class="miniCup4" src="images/item/cup.png">
+                <img class="miniCup5" src="images/item/cup.png">
+                <img class="miniCup6" src="images/item/cup.png">
+                <img class="miniCup7" src="images/item/cup.png">
+                <img class="miniCup8" src="images/item/cup.png">
+                <img class="miniCup9" src="images/item/cup.png">
+                <img class="miniCup10" src="images/item/cup.png">
+                <img class="miniCup11" src="images/item/cup.png">
+                <img class="miniCup12" src="images/item/cup.png">
+                <img class="miniCup13" src="images/item/cup.png">
+                <img class="miniCup14" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup3" src="images/item/cup.png">
+                <img class="miniCup4" src="images/item/cup.png">
+                <img class="miniCup5" src="images/item/cup.png">
+                <img class="miniCup6" src="images/item/cup.png">
+                <img class="miniCup7" src="images/item/cup.png">
+                <img class="miniCup8" src="images/item/cup.png">
+                <img class="miniCup9" src="images/item/cup.png">
+                <img class="miniCup10" src="images/item/cup.png">
+                <img class="miniCup11" src="images/item/cup.png">
+                <img class="miniCup12" src="images/item/cup.png">
+                <img class="miniCup13" src="images/item/cup.png">
+                <img class="miniCup14" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+
+                <img class="miniCup1" src="images/item/cup.png">
+                <img class="miniCup2" src="images/item/cup.png">
+                <img class="miniCup3" src="images/item/cup.png">
+                <img class="miniCup4" src="images/item/cup.png">
+                <img class="miniCup5" src="images/item/cup.png">
+                <img class="miniCup6" src="images/item/cup.png">
+                <img class="miniCup7" src="images/item/cup.png">
+                <img class="miniCup8" src="images/item/cup.png">
+                <img class="miniCup9" src="images/item/cup.png">
+                <img class="miniCup10" src="images/item/cup.png">
+                <img class="miniCup11" src="images/item/cup.png">
+                <img class="miniCup12" src="images/item/cup.png">
+                <img class="miniCup13" src="images/item/cup.png">
+                <img class="miniCup14" src="images/item/cup.png">
+                <img class="miniCup15" src="images/item/cup.png">
+                <img class="miniCup16" src="images/item/cup.png">
+                
+
+                <div id="threeYearsText" class="blue-text">
+                    <h1>for 3 and a half years</h1>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="fiber">
+            <div id="fiberSection" class="text-center sectionContents overlap-contents blue-text"> 
+                <video autoplay muted loop id="fiberVideo">
+                    <source src="images/item/water2.mp4" type="video/mp4">
+                </video>
+                <h1 id="fiberText1">in addition to high water consumption, fast fashion also contributes to water pollution</h1>
+                <h1 id="fiberText2">Microfibers from washing clothes 
+                    making up 85% plastic pollution in the ocean, ending up on shorelines or ingested by marine life.</h1>
+                <img id="fiber1" src="images/item/fibre1.png">
+                <img id="fiber2" src="images/item/fibre2.png">
+                <img id="fiber-floaty-1" src="images/item/fibre-floaty-1.png">
+                <img id="fiber-floaty-2" src="images/item/fibre-floaty-2.png">
+                <img id="fiber-floaty-3" src="images/item/fibre-floaty-3.png">
+                <img id="fiber-floaty-4" src="images/item/fibre-floaty-4.png">
+            </div>
+        </section>
+
+        <section id="dyeWater">
+            <div id="dyeSection" class="text-center sectionContents overlap-contents">
+                <video autoplay muted loop id="dyeVideo" >
+                    <source src="images/item/dye.mp4"  type="video/mp4">
+                </video>  
+                <h1 id="dyeText1">As well as the environmental cost of Fast Fashion, there’s a</h1>
+                <h4 id="dyeText4">human cost</h4>
+                <h1 id="dyeText3">wastewater from toxic fabric dye gets discharged, often untreated,
+                    into nearby rivers</h1>
+                <h1 id="dyeText2"> Due to this, Greenpeace found that the Citarium River in India
+                    led to a deterioration in the health of more than <span id="fiveMilPpl" style="font-size: 6vw">5 million people. </span>
+                    <br>The animals that used the river also suffered from the polluted water. </h1>
+            </div>
+        </section>
+
+       
+
+        <section id="humanCost">
+            <div id="humanCostSection" class="text-center sectionContents"> 
+            <h1>Fast Fashion garment workers have been found to work 
+                in dangerous environments, for <br>low wages and without basic human rights.</h1>
+            <h1>
+           
+            <h1 style="margin-bottom: 0;">Paying living wages to  garment workers would add just</h1>
+            <h4 style="margin-bottom: 1.5vw;">one percent</h4>
+            <h1> on average to the retail price of a piece of clothing.</h1>
+            
+            <h4 style="margin-bottom: 1.5vw;"> Nine out of ten workers </h4>
+            <h1>  interviewed in Bangladesh cannot afford enough food for 
+                themselves and their families, forcing them to regularly skip meals and eat 
+                inadequately, or go into debt.
+            </h1>
+            </div>
+        </section>
+
+        <section>
+
+        </section>
+
+        <script src="js/libgif.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>
