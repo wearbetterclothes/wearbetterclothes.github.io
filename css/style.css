@@ -739,21 +739,136 @@ video{
     margin: 0 auto;
 }
 
+#humanCostSection{
+    position: relative;
+}
+
 #humanCostSection h1{
     width: 60vw;
     color: rgb(231, 107, 255);
-    margin-bottom: 15vw;
+    margin: 0 auto;
 }
 
 #humanCostSection h4{
     color: rgb(231, 107, 255);
 }
 
-#humanCostSection{
-    margin-top: 100vw;
+#humanCost{
+    height: auto !important;
+    padding-top: 10vw;
 }
 
 
+
+.humanText{
+    padding: 10vw 0;
+    grid-column: 2;
+}
+
+#humanCostImgGrid{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr;
+    width: 100vw;
+    position: absolute;
+}
+
+#humanCostImgGrid img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.humanCostImgRight{
+    grid-column: 3;
+    grid-row: 1;
+
+}
+
+.humanCostImgLeft{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#threadBlack{
+    top: 25vw;
+    transform: rotate(40deg);
+}
+
+#threadYellow{
+    transform: rotate(-20deg);
+}
+
+
+
+
+
+
+#thread1{
+    transform: rotate(205deg);
+    width: 150% !important;
+    bottom: 5vw;
+    right: 12vw;
+}
+
+
+#threadWhite{
+    transform: rotate(-30deg);
+    top: 35vw;
+}
+
+#safetyPin{
+    top: 25vw;
+    z-index: 2;
+}
+
+
+#threadCyan{
+    transform: rotate(30deg);
+    z-index: 1;
+    top: 15vw;
+    right: 8vw;
+    width: 120% !important;
+}
+
+#buttonYellow{
+    top: 9vw;
+    left: 6vw;
+}
+
+#buttonCool{
+    top: 2vw;
+    left: 2vw;
+}
+
+
+#thread2{
+    transform: rotate(30deg);
+    width: 250% !important;
+    top: 2vw;
+}
+
+#safetyPinPink{
+    transform: rotate(30deg);
+    top: 15vw;
+}
+
+
+#safetyPinRusty{
+    transform: rotate(30deg);
+    top: 20vw;
+}
+
+
+#buttonGreen, #buttonYellow, #threadBlack, #buttonCool{
+    width: 50% !important;
+}
+
+#buttonGreen{
+    top: 35vw;
+    left: 6vw;
+    z-index:-1;
+}
 
 
 @keyframes floating {

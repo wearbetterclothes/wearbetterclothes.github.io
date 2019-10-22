@@ -120,25 +120,49 @@ var fiberWaterPin = new TimelineMax();
 var dyeWater = new TimelineMax();
 var dyeWaterPin = new TimelineMax();
 
-var humanCost = new TimelineMax();
+var humanCostText1 = new TimelineMax();
+var humanCostText2 = new TimelineMax();
 var humanCostPin = new TimelineMax();
 
 
-humanCostPin.to("#humanCostSection", 1, {y: -1500})
+
+humanCostText2.to("#nineOutOfTen", 0.000001, {color: "#8f0000"})
+
+const humanCostChangeColour2= new ScrollMagic.Scene({
+    triggerElement: "#humanText3",
+    triggerHook: 0
+})
+.setTween(humanCostText2)
+.addTo(controller)
+.addIndicators({name: "humanCostText2 pin scene"});
+
+
+humanCostText1.to("#onePercent", 0.000001, {color: "#8f0000"})
+
+const humanCostChangeColour1= new ScrollMagic.Scene({
+    triggerElement: "#humanText2",
+    triggerHook: 0
+})
+.setTween(humanCostText1)
+.addTo(controller)
+.addIndicators({name: "humanCostText1 pin scene"});
+
+
+
+
+humanCostPin
+.from("#humanCostImgGrid", 0.8, {y: "-50vw"})
+.to("#humanCostImgGrid", 0.7, {y: "50vw"});
+
 
 const humanCostPinScene = new ScrollMagic.Scene({
-    triggerElement: "#humanCost",
+    triggerElement: "#humanText1",
     triggerHook: 0,
-    duration: "150%"
+    duration: "200%"
 })
-.setPin("#humanCost")
 .setTween(humanCostPin)
 .addTo(controller)
 .addIndicators({name: "humanCost pin scene"});
-
-
-
-
 
 
 dyeWaterPin.from("#dyeVideo", 2, {opacity: 0}, "first")
