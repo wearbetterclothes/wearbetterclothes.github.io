@@ -35,6 +35,7 @@ var parallaxInstance = new Parallax(scene);
 var scene2 = document.querySelector('#headerImgBox');
 var parallaxInstance2 = new Parallax(scene2);
 
+
 var prevScrollPos = 0;
 var scrollCount = 0;
 var scrollUp = false;
@@ -127,24 +128,72 @@ var humanCostText1 = new TimelineMax();
 var humanCostText2 = new TimelineMax();
 var humanCostPin = new TimelineMax();
 
+var throwaway = new TimelineMax();
+var throwawayPin = new TimelineMax();
+
+
+throwawayPin
+.to("#sweaterFallImg", 1, {y: "-40vh"}, "last")
+.to("#jeansFallImg", 1, {y: "-20vh"}, "last")
+.to("#jacketFallImg", 1, {y: "-70vh"}, "last")
+.to("#socksFallImg", 1, {y: "-50vh"}, "last")
+.to("#sweatpantsFallImg", 1, {y: "-50vh"}, "last")
+.to("#throwawayText", 1, {y: "-25vh"}, "last")
+.to("#throwawayText", 0.00001, {visibility: "hidden"}, "=-0.5")
+.from("#throwawayText2", 0.00001, {opacity: 0} , "=-0.5")
+.to("#throwawayText2", 0.5, {y: "-5vh"} , "=-0.5")
+
+
+throwawayPinScene = new ScrollMagic.Scene({
+    triggerElement: "#throwAway",
+    triggerHook: 0.5,
+    duration: "200%"
+})
+.setPin("#throwAway")
+.setTween(throwawayPin)
+.addTo(controller)
+.addIndicators({name: "throwaway pin scene"});
+
+
+
+throwaway.to("#throwawayIntroText", 1, {y:"70vh"}, "first")
+.to("#throwawayIntroImg", 1, {filter:"brightness(0.5)"}, "first")
+.to("body", 0.00001, {backgroundColor: "#51ab1a"})
+.from("#sweaterFallImg", 1, {y: "-80vh"}, "last")
+.from("#jeansFallImg", 1, {y: "-60vh"}, "last")
+.from("#jacketFallImg", 1, {y: "-30vh"}, "last")
+.from("#sweatpantsFallImg", 1, {y: "-30vh"}, "last")
+.from("#socksFallImg", 1, {y: "-100vh"}, "last")
+
+const throwawayScene = new ScrollMagic.Scene({
+    triggerElement: "#throwawayIntro",
+    triggerHook: 1,
+    duration: "220%"
+})
+.setTween(throwaway)
+.addTo(controller)
+.addIndicators({name: "throwawayIntro scene"});
+
+
+
 
 
 humanCostText2.to("#nineOutOfTen", 0.000001, {color: "#8f0000"})
 
 const humanCostChangeColour2= new ScrollMagic.Scene({
     triggerElement: "#humanText3",
-    triggerHook: 0
+    triggerHook: 0.25, 
 })
 .setTween(humanCostText2)
 .addTo(controller)
-.addIndicators({name: "humanCostText2 pin scene"});
+.addIndicators({name: "humanCostText2  scene"});
 
 
 humanCostText1.to("#onePercent", 0.000001, {color: "#8f0000"})
 
 const humanCostChangeColour1= new ScrollMagic.Scene({
     triggerElement: "#humanText2",
-    triggerHook: 0
+    triggerHook: 0.25
 })
 .setTween(humanCostText1)
 .addTo(controller)
@@ -651,45 +700,25 @@ const defineFFPinScene = new ScrollMagic.Scene({
 
 
 
-
-
-
-
-massProduce.to("#hatImg", 4, {y: -380})
-.to("#ringNewImg", 3, {y: -520}, "=-3.25")
-.to("#necklaceNewImg", 3, {y: -420}, "=-3.4")
-
-.from("#shirtsImg1", 6, {y:1800, opacity: 0})
-;
-
-const massProduceScene = new ScrollMagic.Scene({
-    triggerElement: "#massProduce",
-    triggerHook: 1,
-    duration: "100%"
-})
-.setTween(massProduce)
-.addTo(controller)
-.addIndicators({name: "massProduce scene"});
-
-
-
-massProducePin.to('#shirtsImg1', 315, {y: -2500}, "first")
-.from('#massProducedText', 1, {opacity: 0}, "first")
-.from('#bagImg', 85, {y: 700}, "=-100.5")
-.from('#massPurchasedText', 1, {opacity: 0}, "=-80.5")
-.to('#shirtsImg2', 1, {opacity: '1'}, "=-20.5")
-.to('#shirtsImg2', 315, {y: 2700}, "=-20.5")
-.to('#bagImg', 185, {y: -1200},"=-60.5")
-.from('#massAndText', 1, {opacity: 0}, "=-180.5")
-.to('#shirtsImg3', 0.25, {opacity: '1'}, "=-130.5" )
-.to('#shirtsImg3', 315, {y: 2700}, "=-140.5")
-.from('#massBinText', 1, {opacity: 0}, "=-280.5")
-.from('#binImg', 101, {y: 500}, "=-280.5")
-.to('#shirtsImg3', 0.25, {opacity: 0}, "=-100.5")
-.to('#shirtsImg2', 0.25, {opacity: 0}, "=-100.5")
-.to('#shirtsImg1', 0.25, {opacity: 0}, "=-100.5")
-.from('#binLidImg', 55, {transform: "rotate(-80deg)", bottom: "40vw", right: "180vw"}, "=-100.5")
-
+massProducePin.to("#shirtsImg1", 1, {y: "-250vh"}, "first")
+.from('#massProducedText', 0.5, {x: "100vw"}, "first")
+.to("#shirtsImg1", 0.00001, {opacity: 0}, "second")
+.from("#bagImg", 0.00001, {opacity: 0}, "second")
+.from("#shirtsImg2", 0.00001, {opacity: 0}, "second")
+.from("#shirtsImg2", 1, {y: "-400vh"}, "second")
+.to("#shirtsImg2", 1, {y: "50vh"}, "second")
+.from("#bagImg", 1, {y: "100vh"}, "second")
+.from('#massPurchasedText', 0.5, {x: "100vw"}, "second")
+.from('#massAndText', 0.0001, {opacity: 0}, "=-0.33")
+.to("#bagImg", 1, {y: "-200vh"}, "third")
+.from("#shirtsImg3", 0.00001, {opacity: 0}, "third")
+.from("#shirtsImg3", 1, {y: "-400vh"}, "=-0.75")
+.from("#massBinText", 0.5, {x: "100vw"}, "=-0.75")
+.from('#binImg', 1, {y: "50vh"}, "=-0.75")
+.from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-100vh) rotate(-90deg"}, "fourth ")
+.to("#bagImg", 0.00001, {opacity: 0}, "fourth")
+.to("#shirtsImg3", 1, {opacity: "0"}, "fourth")
+.to("#shirtsImg2", 1, {opacity: "0"}, "fourth")
 ;
 
 const pinMassProduceScene = new ScrollMagic.Scene({
@@ -704,36 +733,46 @@ const pinMassProduceScene = new ScrollMagic.Scene({
 
 
 
+massProduce.from("#shirtsImg1", 1, {y: "100vh"})
+
+const massProduceScene = new ScrollMagic.Scene({
+    triggerElement: "#massProduce",
+    triggerHook: 1,
+    duration: "100%"
+})
+.setTween(massProduce)
+.addTo(controller)
+.addIndicators({name: "massProduce scene"});
 
 
-newFashion.to("#crownImg", 1, {y:-480}, "first")
-.to("#necklaceImg", 1, {y:-380}, "first")
-.to("#ringImg", 1, {y:-280}, "first")
-.to("#oldFashionText", 2, {y:-480}, "first")
-.from('#hatImg', 0.5, {opacity: 0}, "=-0.5")
-.from('#hatImg', 1, {y: -300}, "=-0.5")
-.from("#ringNewImg", 0.5, {opacity: 0}, "=-0.5")
-.from("#ringNewImg", 1, {y: -250}, "=-0.5")
-.from("#necklaceNewImg", 0.5, {opacity: 0}, "=-0.5")
-.from("#necklaceNewImg", 1, {y: -250}, "=-0.5");
+
+
+newFashion.to("#crownImg", 1, {y:"-70vh"}, "first")
+.to("#necklaceImg", 1, {y:"-50vh"}, "first")
+.to("#ringImg", 1, {y:"-60vh"}, "first")
+.from('#hatImg', 0.5, {opacity: 0}, "first")
+.from('#hatImg', 1, {y: "-33vh"}, "first")
+.from("#ringNewImg", 0.5, {opacity: 0}, "first")
+.from("#ringNewImg", 1, {y: "-20vh"}, "first")
+.from("#necklaceNewImg", 0.5, {opacity: 0}, "first")
+.from("#necklaceNewImg", 1, {y: "-13vh"}, "first");
 
 
 
 const newFashionScene = new ScrollMagic.Scene({
     triggerElement: "#newFashion",
-    triggerHook: 1,
-    duration: "100%"
+    triggerHook: 0.5
 })
 .setTween(newFashion)
 .addTo(controller)
 .addIndicators({name: "new fashion scene"});
 
-newFashionPin.from('#fashionStraightText', 0.1, {x: 800})
+newFashionPin.from('#fashionStraightText', 1, {x: 800})
 
 const pinNewFashionScene = new ScrollMagic.Scene({
     triggerElement: "#newFashion",
     triggerHook: 0,
-    duration: "100%"
+    duration: "200%"
 })
 .setPin("#newFashion")
 .setTween(newFashionPin)
@@ -746,12 +785,11 @@ const pinNewFashionScene = new ScrollMagic.Scene({
 
 
 oldFashion.to("#introText", 0.25, {y: -250}, "first")
-.from("#crownImg", 1, {y:-280}, "first");  
+
 
 const oldFashionScene = new ScrollMagic.Scene({
     triggerElement: "#oldFashion",
-    triggerHook: 1,
-    duration: "100%"
+    triggerHook: 1
 })
 .setTween(oldFashion)
 .addTo(controller)
@@ -787,9 +825,7 @@ intro.from("#introText", 0.4, {y: -200}, "first")
 
 
 const introScene = new ScrollMagic.Scene({
-    triggerElement: "#introSection",
-    triggerHook: 1,
-    duration: "100%"
+    triggerElement: "#introSection"
 })
 .setTween(intro)
 .addTo(controller)
