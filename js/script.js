@@ -189,7 +189,7 @@ throwawayPinScene = new ScrollMagic.Scene({
 
 throwaway.to("#throwawayIntroText", 1, {y:"50vh"}, "first")
 .to("#throwawayIntroImg", 1, {filter:"brightness(0.5)"}, "first")
-.to("body", 0.00001, {backgroundColor: "#51ab1a"}, "=0.5")
+.to("body", 0.00001, {backgroundColor: "#51ab1a"}, "=0.85")
 .from("#sweaterFallImg", 1, {y: "-40vh"}, "last")
 .from("#jeansFallImg", 1, {y: "-60vh"}, "last")
 .from("#jacketFallImg", 1, {y: "-30vh"}, "last")
@@ -589,6 +589,7 @@ co2Pin.from("#smokeVideo", 0.25, {opacity: "0"})
 .from("#co2Text3", 0.0001, {opacity: "0"})
 .to("#co2Text2", 0.05, {opacity: "1"})
 .from("#co2Text4", 0.000001, {opacity: "0"})
+.to("#co2Text4", 0.4, {opacity: "1"})
 .to("body", 0.1, {backgroundColor: "#F77600"})
 .to("#smokeVideo", 0.1, {opacity: "0"})
 ;
