@@ -131,14 +131,45 @@ var humanCostPin = new TimelineMax();
 var throwaway = new TimelineMax();
 var throwawayPin = new TimelineMax();
 
+var whatToDo = new TimelineMax();
+
+
+whatToDo.to("body", 1, {backgroundColor: "#148D62"}, "first")
+.to("#sweaterFallImg", 1, {y: "240vh"}, "first")
+.to("#jeansFallImg", 1, {y: "320vh"}, "first")
+.to("#jacketFallImg", 1, {y: "220vh"}, "first")
+.to("#socksFallImg", 1, {y: "200vh"}, "first")
+.to("#sweatpantsFallImg", 1, {y: "280vh"}, "first")
+.to(".throwawayImg", 1, {transform: "rotate(40deg"}, "first")
+
+
+.to("#sweaterFallImg", 0.00001, {opacity: 0}, "last")
+.to("#jeansFallImg", 0.000001, {opacity: 0}, "last")
+.to("#jacketFallImg", 0.00001, {opacity: 0}, "last")
+.to("#socksFallImg", 0.00001, {opacity: 0}, "last")
+.to("#sweatpantsFallImg", 0.00001, {opacity: 0}, "last")
+
+whatToDoScene = new ScrollMagic.Scene({
+    triggerElement: "#whatToDo",
+    triggerHook: 1,
+    duration: "100%",
+    offset: "-300vh"
+})
+.setTween(whatToDo)
+.addTo(controller)
+.addIndicators({name: "whatToDo scene"});
+
+
+
 
 throwawayPin
+.to(".throwawayImg", 1, {transform: "rotate(5deg"}, "last")
 .to("#sweaterFallImg", 1, {y: "-40vh"}, "last")
 .to("#jeansFallImg", 1, {y: "-20vh"}, "last")
 .to("#jacketFallImg", 1, {y: "-70vh"}, "last")
 .to("#socksFallImg", 1, {y: "-50vh"}, "last")
 .to("#sweatpantsFallImg", 1, {y: "-50vh"}, "last")
-.to("#throwawayText", 1, {y: "-25vh"}, "last")
+.to("#throwawayText", 1, {y: "-35vh"}, "last")
 .to("#throwawayText", 0.00001, {visibility: "hidden"}, "=-0.5")
 .from("#throwawayText2", 0.00001, {opacity: 0} , "=-0.5")
 .to("#throwawayText2", 0.5, {y: "-5vh"} , "=-0.5")
@@ -156,14 +187,15 @@ throwawayPinScene = new ScrollMagic.Scene({
 
 
 
-throwaway.to("#throwawayIntroText", 1, {y:"70vh"}, "first")
+throwaway.to("#throwawayIntroText", 1, {y:"50vh"}, "first")
 .to("#throwawayIntroImg", 1, {filter:"brightness(0.5)"}, "first")
-.to("body", 0.00001, {backgroundColor: "#51ab1a"})
-.from("#sweaterFallImg", 1, {y: "-80vh"}, "last")
+.to("body", 0.00001, {backgroundColor: "#51ab1a"}, "=0.5")
+.from("#sweaterFallImg", 1, {y: "-40vh"}, "last")
 .from("#jeansFallImg", 1, {y: "-60vh"}, "last")
 .from("#jacketFallImg", 1, {y: "-30vh"}, "last")
 .from("#sweatpantsFallImg", 1, {y: "-30vh"}, "last")
-.from("#socksFallImg", 1, {y: "-100vh"}, "last")
+.from("#socksFallImg", 1, {y: "-60vh"}, "last")
+
 
 const throwawayScene = new ScrollMagic.Scene({
     triggerElement: "#throwawayIntro",
