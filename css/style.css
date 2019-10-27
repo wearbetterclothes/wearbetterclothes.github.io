@@ -67,7 +67,7 @@ h2, h1, h3, button, h4{
     text-transform: uppercase;
 }
 
-h2{font-size: 2vw; line-height: 3vw;}
+h2{font-size: 2.5vw; line-height: 3.5vw;}
 
 h1{font-size: 3vw; line-height: 5vw; margin: 0}
 
@@ -85,8 +85,13 @@ button{
 }
 
 button:hover{
-    box-shadow: 0px 8px 12px 0 rgba(0,0,0,0.44);
+    box-shadow: 0px 0.5vw 1vw 0 rgba(0,0,0,0.44);
 }
+
+i:hover{
+    box-shadow: 0.25vw 0.25vw 0.35vw 0 rgba(0,0,0,0.34);
+}
+
 
 
 
@@ -97,6 +102,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     margin: 0 11vw;
+    width: auto !important;
 }
 
 .text-center{
@@ -106,10 +112,35 @@ button:hover{
     width: 100%;
 }
 
+#glassImg{
+    transform: rotate(95deg);
+    width: 40% !important;
+    right: 35vw;
+    bottom: 5vw;
+}
+
+#mapImg{
+    transform: rotate(190deg);
+    width: 80% !important;
+    right: 20vw;
+    top: 5vw;
+}
+
+#bookImg{
+    transform: rotate(220deg);
+    width: 100% !important;
+    left: 75vw;
+    bottom: 20vw;
+}
+
+#endImgLogoBox{
+    display: flex;
+    justify-content: center;
+}
 
 /*-------------------------------------------------------header stuff----------------------------------------------------------*/
 
-#headerImgBox{
+#headerImgBox, #endImgBox{
     z-index: -2;
     position: absolute;
     width: 100vw;
@@ -184,7 +215,9 @@ button:hover{
     z-index: 3;
 }
 
-
+header h2{
+    font-size: 2vw;
+}
 
 header{
     height: 100vh;
@@ -193,8 +226,33 @@ header{
     position: relative;
 }
 
+i {
+    border: solid black;
+    border-width: 0 0.6vh 0.6vh 0;
+    display: inline-block;
+    padding: 7px 7px 8px 7px;
+    width: 1px;
+    margin-top: 3vw;
+
+}
+
+#arrowBox{
+    margin: 0 auto;
+    
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.down {
+    transform: rotate(45deg) !important;
+    -webkit-transform: rotate(45deg) !important;
+}
+
 #headerLogoBox{
     margin: 0 20vw;
+    margin-bottom: 5vw;
 }
 
 #headerLogoBox img{
@@ -203,12 +261,12 @@ header{
 }
 
 #headingAndButtonsBox{
-    margin-top: 8vw;
+    margin-top: 5vw;
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-rows: 1fr 2fr;
-    margin-bottom: 3vw;
+    grid-template-rows: 1fr 2fr 1fr;
+    margin-bottom: 5vw;
 }
 
 #buttonBox{
@@ -216,11 +274,12 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-bottom: 6vw;
+    padding-bottom: 2vw;
+    padding-top: 1vw;
 }
 
-#buttonBox button{
-    width: 60%;
+ button{
+    width: 40%;
     margin: 0 1vw;
 }
 
@@ -241,6 +300,10 @@ header{
 }
 
 /*-------------------------------------------------------content margins-------------------------------------------------------*/
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+  }
 
 #fiberVideo{
     height: 150vh !important;
@@ -278,14 +341,17 @@ header{
 }
 
 #dyeText2{
-    width: 75vw;
+    width: 78vw;
 }
 
 #dyeSection{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+}
 
+#fiveMilPpl{
+    margin-top: 2vw;
 }
 
 #polyesterSection{
@@ -317,7 +383,11 @@ header{
     margin: 5vh 0;
 }
 
-
+#earthGif{
+    /*filter: contrast(1.5) brightness(0.7) saturate(2);*/
+    width: auto;
+    height: 100vh;
+}
 
 #glassesGrid{
     display: grid;
@@ -378,7 +448,7 @@ video{
   }
 
 #co2Text3{
-    font-size: 24vw;
+    font-size: 29vw;
     margin-top: -7vw;
     color: rgb(197, 4, 31);
 }
@@ -409,7 +479,7 @@ video{
 .overlap-contents{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;;
+    grid-template-rows: 1fr;
 }
 
 #threeYearsText{
@@ -552,16 +622,12 @@ video{
     margin-top: 15vw;
 }
 
-.jsgif canvas{
-    filter: contrast(1.5) brightness(0.7) saturate(2);
-    width: auto;
-    height: 100vh;
-}
+
 
 .imageLeftTextRight{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5vw;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10vw;
     
 }
 
@@ -737,7 +803,7 @@ video{
 
 #clothingLabel{
     width: auto;
-    bottom: 10vw;
+    bottom: 5vw;
     height: 100vw;
     z-index: -20;
 }
@@ -801,7 +867,7 @@ video{
 }
 
 #fiber-floaty-3{
-    right: 15vw; 
+    right: 19.5vw; 
     top: 15vw;
     opacity: 0.7;
     z-index: -2;
@@ -814,9 +880,22 @@ video{
 
 #fiberText2{
     position: relative;
-
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
+    bottom: 15vw;
+}
+
+#fiberText3{
+    width: 80vw;
+    margin: 0 auto;
+    bottom: 5vw;
+    font-size: 20vw;
+}
+
+#fiberText4{
+    width: 50vw;
+    margin: 0 auto;
+    top: 12vw;
 }
 
 #humanCostSection{
@@ -964,7 +1043,7 @@ video{
 }
 
 #throwawayText, #throwawayText2{
-    color: #ffd300;
+    color: #8ddc5b;
     text-align: center;
     margin: 0 auto;
     width: 65vw;
@@ -1010,6 +1089,95 @@ video{
     height: auto;
 }
 
+#overTheYears h1{
+    margin: 0 auto;
+    padding-left: 1vw;
+    text-align: center;
+    bottom: 7vw;
+    width: 65vw;
+    color: #8ddc5b;
+}
+
+#overTheYearsText2, #overTheYearsText3{
+    bottom: 3vw !important;
+    color: rgb(192, 255, 0) !important;
+}
+
+
+#grassVideo{
+    position: relative;
+    bottom: 40vh;   
+    filter: hue-rotate(366deg);
+    opacity: 1;
+}
+
+
+#whatToDo{
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    padding-bottom: 10vw;
+}
+
+#thrifting h1, #thrifting h4, #benefits h1, #benefits h4{
+    color: #DF34FF;
+}
+
+#benefits h1{
+    text-align: left;
+    grid-column: 2;
+}
+
+#benefitsText1{
+    bottom: 20vw !important;
+    text-align: center !important;
+    grid-column: 1 !important;
+}
+
+.benefitsTextBox{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    margin-bottom: 10vw;
+}
+
+.benefitsTextBox h4{
+    font-size: 18vw;
+    bottom: 4vw;
+}
+
+.benefitsTextBox h1{
+    color: #FBCA2B !important;
+}
+
+#end img {
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin-bottom: 2vw;
+}
+
+#end h1{
+    margin: 0 auto;
+}
+
+#thriftShopFinder h1{
+    width: 90%;
+}
+
+#findThriftStore{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#findThriftStore h1{
+    bottom: 3vw;
+}
+
+#endButtonBox button{
+    width: 30%;
+    margin: 0 1vw;
+}
 
 @keyframes floating {
     from { transform: translate(0,  0px); }

@@ -55,6 +55,9 @@
                     <button onclick="scrollDown()">OK Teach me!</button>
                     <BUTTON>I already know!</BUTTON>
                 </div>
+                <div id="arrowBox">
+                    <i class="down" onclick="scrollDown()"></i>
+                </div>
             </div>
         </header>
         
@@ -346,8 +349,13 @@
                     <source src="images/item/water2.mp4" type="video/mp4">
                 </video>
                 <h1 id="fiberText1">in addition to high water consumption, fast fashion also contributes to water pollution</h1>
-                <h1 id="fiberText2">Microfibers from washing clothes 
-                    making up 85% plastic pollution in the ocean, ending up on shorelines or ingested by marine life.</h1>
+                <h2 id="fiberText2">Microfibers from  <br>washing clothes make up </h2>
+                    
+                <h4 id="fiberText3">
+                    85% 
+                </h4>
+
+                <h2 id="fiberText4">of plastic pollution in the ocean, ending up on shorelines or ingested by marine life.</h2>
                 <img id="fiber1" src="images/item/fibre1.png">
                 <img id="fiber2" src="images/item/fibre2.png">
                 <img id="fiber-floaty-1" src="images/item/fibre-floaty-1.png">
@@ -367,7 +375,8 @@
                 <h1 id="dyeText3">wastewater from toxic fabric dye gets discharged, often untreated,
                     into nearby rivers</h1>
                 <h1 id="dyeText2"> Due to this, Greenpeace found that the Citarium River in India
-                    led to a deterioration in the health of more than <span id="fiveMilPpl" style="font-size: 6vw">5 million people. </span>
+                    led to a deterioration in the health of more than <br>
+                    <span id="fiveMilPpl" style="font-size: 7.5vw">5 million people. </span>
                     <br>The animals that used the river also suffered from the polluted water. </h1>
             </div>
         </section>
@@ -449,16 +458,104 @@
             </div>
         </section>
         
-        <section id="whatToDo">
-            <div class=" text-center">
-                <h4 id="whatToDoText" class="blue-text">So, what can we do?</h4>
+        <section id="overTheYears">
+            <div class="overlap-contents ">
+                <h1 id="overTheYearsText1">what once was only for a selective some, fashion progressing into an expressive medium is a <span style="text-transform: lowercase;">revolutionary change</span> for us as creative beings </h1>
+                <h1 id="overTheYearsText2">however, the fashion industry has escalated into a system of destruction for our planet</h1>
+                <h1 id="overTheYearsText3">we won’t be making any more <span style="text-transform: lowercase;">revolutionary changes</span> if we don’t have a planet to live on</h1>
+                <div style="filter: contrast(1.2) brightness(0.8);  z-index: -5">
+                    <video autoplay muted loop id="grassVideo">
+                        <source src="images/item/grass.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+            </div>
+        </section>
+
+        <div id="whatToDo">
+            <h4 id="whatToDoText" class="blue-text">So, what <br> can we do?</h4>
+        </div>
+
+        <section id="thrifting">
+            <div class="text-center" id="thriftingText">
+                <h1>
+                    One easy option to <br> combat fast fashion is 
+                </h1>
+                <h4 id="thriftShoppingText">
+                    thrift shopping
+                </h4>
+            </div>
+        </section>
+
+
+        <section id="benefits">
+            <div class="sectionContents overlap-contents text-center" style="margin: 0 8vw 0 9vw;">
+                <h1 id="benefitsText1">
+                    Buying second hand means that
+                </h1>
+
+                <div class="benefitsTextBox" id="benefits1">
+                    <h4> 1 </h4>
+                    <h1 id="benefitsText2">
+                        you wouldn't be contributing to the environmental issues that the fast fashion industry cause 
+                    </h1>
+                </div>
+               
+                <div class="benefitsTextBox" id="benefits2">
+                    <h4> 2 </h4>
+                    <h1 id="benefitsText3">
+                        you wouldn't be supporting the unethical production of fast fashion clothes
+                    </h1>
+                
+                </div>
+
+                <div class="benefitsTextBox" id="benefits3">
+                    <h4> 3 </h4>
+                    <h1 id="benefitsText4">
+                        your money will be going to families in need through the charity the thrift shop supports 
+                    </h1>
+                </div>
+
+                
+            </div>
+        </section>
+
+
+        <section id="end">
+            <div id="thriftShopFinder" class="sectionContents text-center">
+                <h1 id="thatsWhyAt">
+                    that's why at 
+                </h1>
+                <div id="endImgLogoBox">
+                    <img data-depth="0.2" id="endImg"src="images/logo-shadow.png">
+                </div>
+                <div class="overlap-contents">
+                    <h1 id="firstSteps">
+                        we provide you with the first step towards saving the planet
+                    </h1>
+                    <div id="findThriftStore">
+                        <h1 > Find a thrift store near you </h1>
+                        <div id="endButtonBox">
+                            <button onclick='goToSearchPage()'>start searching!</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="endImgBox" class="overlap-contents">
+                    <div data-depth="0.6">
+                        <img id="glassImg" src="images/item/magnify.png">
+                    </div>
+    
+                    <div data-depth="0.2" style="z-index: -3;">
+                        <img id="mapImg" src="images/item/map.png">
+                    </div>
+                    <div data-depth="0.3">
+                        <img id="bookImg" src="images/item/book.png">
+                    </div>
+                </div>
+
             </div>
             
-        </section>
-
-        <section>
-
-        </section>
+            </section>
 
         
 

@@ -1,40 +1,29 @@
-var sup1;
-/*
-sup1 = new SuperGif({ gif: document.getElementById('earthGif') } );
-sup1.load();
-*/
+
 
 function scrollDown() {
     document.getElementById('introSection').scrollIntoView({ block: 'start',  behavior: 'smooth' });
+}
+
+function goToSearchPage(){
+    window.location.href="main.html"
 }
 
 window.onload = () =>{
     const preload = document.querySelector(".preload");
     const body = document.querySelector("body");
    
-    if(sup1 != undefined){
-        timer = setInterval(()=>{
-            if(sup1.get_loading() == false){
-                preload.classList.add('preload-finish');
-                body.style.overflowY = "scroll";
-                window.scrollTo(0,0);
-                clearInterval(timer);
-            }
-        }, 2000);
-    }
-    else{
-        preload.classList.add('preload-finish');
-        body.style.overflowY = "scroll";
-        window.scrollTo(0,0);
-    }
-}
+    window.scrollTo(0,0);
 
-var scene = document.querySelector('#headerLogoBox');
-var parallaxInstance = new Parallax(scene);
+    preload.classList.add('preload-finish');
+    body.style.overflowY = "scroll";
+
+}
 
 var scene2 = document.querySelector('#headerImgBox');
 var parallaxInstance2 = new Parallax(scene2);
 
+var scene3 = document.querySelector('#endImgBox');
+var parallaxInstance3 = new Parallax(scene3);
 
 var prevScrollPos = 0;
 var scrollCount = 0;
@@ -99,7 +88,6 @@ var co2Pin = new TimelineMax();
 var polyester = new TimelineMax();
 var polyesterPin = new TimelineMax();
 
-
 var threeThingsCo2 = new TimelineMax();
 var threeThingsCo2Pin = new TimelineMax();
 
@@ -131,16 +119,183 @@ var humanCostPin = new TimelineMax();
 var throwaway = new TimelineMax();
 var throwawayPin = new TimelineMax();
 
+var overTheYears = new TimelineMax();
+var overTheYearsPin = new TimelineMax();
+
 var whatToDo = new TimelineMax();
+var whatToDoPin = new TimelineMax();
+
+var thrifting = new TimelineMax();
+var thriftingPin = new TimelineMax();
+
+var benefits = new TimelineMax();
+var benefitsPin = new TimelineMax();
+
+var endPin = new TimelineMax();
 
 
-whatToDo.to("body", 1, {backgroundColor: "#148D62"}, "first")
-.to("#sweaterFallImg", 1, {y: "240vh"}, "first")
-.to("#jeansFallImg", 1, {y: "320vh"}, "first")
-.to("#jacketFallImg", 1, {y: "220vh"}, "first")
-.to("#socksFallImg", 1, {y: "200vh"}, "first")
-.to("#sweatpantsFallImg", 1, {y: "280vh"}, "first")
-.to(".throwawayImg", 1, {transform: "rotate(40deg"}, "first")
+
+
+endPin.from("#thatsWhyAt", 2, {opacity: 1})
+.to("#thatsWhyAt", 0.5, {opacity: 0}, "first")
+.to("#firstSteps", 0.5, {opacity: 0}, "first")
+.to("#endImg", 1 ,{y:"-10vh"}, "first")
+.to("body", 1 ,{backgroundColor: "#FFAE02"}, "first")
+.to("#findThriftStore", 1, {opacity:1}, "last")
+.from("#endImgBox", 1, {opacity: 0}, "last")
+.to("#findThriftStore", 0.00001, {pointerEvents: "all"})
+.to("#endImgBox", 3, {opacity: 1})
+
+endPinScene = new ScrollMagic.Scene({
+    triggerElement: "#end",
+    triggerHook: 0,
+    duration: "250%"
+})
+.setPin("#end")
+.setTween(endPin)
+.addTo(controller)
+.addIndicators({name: "end pin scene"});
+
+
+
+
+
+benefits.to("#thriftingText", 1, {y:"-100vh"})
+
+benefitsScene = new ScrollMagic.Scene({
+    triggerElement: "#benefits",
+    triggerHook: 1,
+    duration: "100%"
+})
+.setTween(benefits)
+.addTo(controller)
+.addIndicators({name: "benefits scene"});
+    
+
+
+
+
+
+benefitsPin.from("#benefits1", 1, {x: "150vw"})
+.from("#benefits1", 2, {opacity: "1"})
+.to("#benefits1", 1, {x: "-150vw"}, "first")
+.from("#benefits2", 1, {x: "150vw"}, "first")
+.from("#benefits1", 2, {opacity: "1"})
+.to("#benefits2", 1, {x: "-150vw"}, "second")
+.from("#benefits3", 1, {x: "150vw"}, "second")
+.from("#benefits1", 2, {opacity: "1"})
+
+benefitsPinScene = new ScrollMagic.Scene({
+    triggerElement: "#benefits",
+    triggerHook: 0,
+    duration: "400%",
+    offset:"-150vh"
+})
+.setPin("#benefits")
+.setTween(benefitsPin)
+.addTo(controller)
+.addIndicators({name: "benefits pin scene"});
+
+
+
+thrifting.to('body', 1, {backgroundColor: "#8B2FC2"}, "first")
+.to('#whatToDoText', 1, {y: "-100vh"}, "first")
+
+thriftingPin.to('#thriftShoppingText', 0.00001, {color: "yellow"})
+.to('#thriftShoppingText', 1, {color: "#FBCA2B"})
+
+thriftingPinScene = new ScrollMagic.Scene({
+    triggerElement: "#thrifting",
+    triggerHook: 0.35,
+    duration: "100%"
+})
+.setTween(thriftingPin)
+.addTo(controller)
+.addIndicators({name: "thriftingPin scene"});
+
+thriftingScene = new ScrollMagic.Scene({
+    triggerElement: "#thrifting",
+    triggerHook: 1,
+    duration: "100%"
+})
+.setTween(thrifting)
+.addTo(controller)
+.addIndicators({name: "thrifting scene"});
+    
+
+
+
+
+
+
+whatToDoPin
+.to("#whatToDoText", 1, {y:"-25vh"})
+
+whatToDoPinScene = new ScrollMagic.Scene({
+    triggerElement: "#whatToDo",
+    triggerHook: 0.5,
+    duration: "100%",
+})
+.setPin("#whatToDo")
+.setTween(whatToDoPin)
+.addTo(controller)
+.addIndicators({name: "whatToDo pin scene"});
+
+
+
+
+whatToDo.to("#grassVideo", 0.25, {opacity: 0}, "first")
+.to("#overTheYearsText1", 2, {opacity: 0}, "second")
+
+
+whatToDoScene = new ScrollMagic.Scene({
+    triggerElement: "#whatToDo",
+    triggerHook: 1,
+    duration: "100%",
+    ease: Power0.easeNone,
+    offset: "-100vh"
+})
+.setTween(whatToDo)
+.addTo(controller)
+.addIndicators({name: "whatToDo scene"});
+
+
+
+
+overTheYearsPin.from("#grassVideo", 1, {opacity: 0}, "first")
+.to("#overTheYearsText1", 1, {color: "rgb(192, 255, 0)"}, "first")
+.to("#overTheYearsText1", 2, {opacity: 1}, "second")
+.to("#overTheYearsText1", 0.00001, {visibility: "hidden"})
+.from("#overTheYearsText2", 0.00001, {opacity: 0})
+.to("#grassVideo", 2, {filter: "hue-rotate(330deg)"}, "third")
+.to("#overTheYearsText2", 2, {opacity: 1}, "third")
+.to("#overTheYearsText2", 0.00001, {opacity: 0})
+.from("#overTheYearsText3", 0.00001, {opacity: 0})
+.to("#overTheYearsText3", 2, {opacity: 1}, "last")
+
+
+
+
+overTheYearsPinScene = new ScrollMagic.Scene({
+    triggerElement: "#overTheYears",
+    triggerHook: 0,
+    duration: "200%",
+    offset: "-300vh"
+})
+.setPin("#overTheYears")
+.setTween(overTheYearsPin)
+.addTo(controller)
+.addIndicators({name: "overTheYears pin scene"});
+
+
+overTheYears.to("body", 15, {backgroundColor: "#148D62"}, "first")
+.to("#sweaterFallImg", 15, {y: "280vh"}, "first")
+.to("#jeansFallImg", 15, {y: "360vh"}, "first")
+.to("#jacketFallImg", 15, {y: "260vh"}, "first")
+.to("#socksFallImg", 15, {y: "240vh"}, "first")
+.to("#sweatpantsFallImg", 15, {y: "320vh"}, "first")
+.to(".throwawayImg", 15, {transform: "rotate(40deg"}, "first")
+.to("#grassVideo", 0.0001, {opacity: 0}, "first")
 
 
 .to("#sweaterFallImg", 0.00001, {opacity: 0}, "last")
@@ -149,15 +304,15 @@ whatToDo.to("body", 1, {backgroundColor: "#148D62"}, "first")
 .to("#socksFallImg", 0.00001, {opacity: 0}, "last")
 .to("#sweatpantsFallImg", 0.00001, {opacity: 0}, "last")
 
-whatToDoScene = new ScrollMagic.Scene({
-    triggerElement: "#whatToDo",
+overTheYearsScene = new ScrollMagic.Scene({
+    triggerElement: "#overTheYears",
     triggerHook: 1,
-    duration: "100%",
+    duration: "250%",
     offset: "-300vh"
 })
-.setTween(whatToDo)
+.setTween(overTheYears)
 .addTo(controller)
-.addIndicators({name: "whatToDo scene"});
+.addIndicators({name: "overTheYears scene"});
 
 
 
@@ -187,8 +342,8 @@ throwawayPinScene = new ScrollMagic.Scene({
 
 
 
-throwaway.to("#throwawayIntroText", 1, {y:"50vh"}, "first")
-.to("#throwawayIntroImg", 1, {filter:"brightness(0.5)"}, "first")
+throwaway.to("#throwawayIntroText", 1, {y:"70vh"}, "first")
+.to("#throwawayIntroImg", 1, {filter:"brightness(0.75)"}, "first")
 .to("body", 0.00001, {backgroundColor: "#51ab1a"}, "=0.85")
 .from("#sweaterFallImg", 1, {y: "-40vh"}, "last")
 .from("#jeansFallImg", 1, {y: "-60vh"}, "last")
@@ -286,6 +441,8 @@ fiberWaterPin.from("#fiberVideo", 1, {opacity: 0}, "first")
 .to("#fiberVideo", 1, {y: -350}, "second")
 .to("#fiberText1", 1, {y: -750}, "second")
 .from("#fiberText2", 1, {y: 1000}, "second")
+.from("#fiberText3", 1, {y: 1000}, "second")
+.from("#fiberText4", 1, {y: 1000}, "second")
 .from("#fiber1", 1, {y: 1850}, "second")
 .from("#fiber2", 1, {y: 2350}, "second")
 .to("body", 0.5, {backgroundColor: "black"}, "second")
@@ -294,12 +451,16 @@ fiberWaterPin.from("#fiberVideo", 1, {opacity: 0}, "first")
 .from("#fiber-floaty-3", 1, {y: 1350}, "second")
 .from("#fiber-floaty-4", 1, {y: 1350}, "second")
 .to("#fiberText2", 1, {y: -200}, "third")
+.to("#fiberText3", 1, {y: -200}, "third")
+.to("#fiberText4", 1, {y: -200}, "third")
+
 .to("#fiber1", 1, {y: -100}, "third")
 .to("#fiber2", 1, {y: -200}, "third")
 .to("#fiber-floaty-1", 1, {y: -550}, "third")
 .to("#fiber-floaty-2", 1, {y: -1050}, "third")
 .to("#fiber-floaty-3", 1, {y: -350}, "third")
 .to("#fiber-floaty-4", 1, {y: -850}, "third")
+.to("#fiberText3", 0.0001, {color:"rgb(255, 106, 0)"}, "=-0.5")
 .to("#fiberVideo", 0.5, {opacity: 0}, "=-0.5");
 
 const FiberPinSectionScene = new ScrollMagic.Scene({
@@ -356,6 +517,10 @@ threeYearsWaterPin.from(".miniCup1", 0.00001, {opacity: 0})
 
 
 
+
+
+
+
 threeYearsWaterPinScene = new ScrollMagic.Scene({
     triggerElement: "#threeYearsWater",
     triggerHook: 0,
@@ -373,7 +538,6 @@ threeYearsWaterPinScene = new ScrollMagic.Scene({
 
 
 threeYearsWater.to("#glassesGrid", 2, {y:200});
-
 threeYearsWaterScene = new ScrollMagic.Scene({
     triggerElement: "#threeYearsWater",
     triggerHook: 1,
@@ -410,7 +574,7 @@ drinkingWaterPin.to("#onePerson", 0.00001, {color: "#6EC3D5"})
 const drinkingWaterPinScene = new ScrollMagic.Scene({
     triggerElement: "#drinkingWater",
     triggerHook: 0,
-    duration: "100%"
+    duration: "150%"
 })
 .setPin("#drinkingWater")
 .setTween(drinkingWaterPin)
@@ -444,22 +608,22 @@ cottonWaterPin
 .to("#soManyLiters", 3, {color: "#6EC3D5"})
 .to("#singleCottonShirt", 0.0001, {color: "#6EC3D5"})
 .to("#singleCottonShirt", 5, {color: "#6EC3D5"})
-.to("#cottonImg1", 1, {y: 400})
+.to("#cottonImg1", 2, {y: 400})
 .to("#cottonImg1", 0.00001, {opacity: 0})
-.to("#cottonImg2", 1, {y: 400}, "=-0.75")
+.to("#cottonImg2", 2, {y: 400}, "=-0.75")
 .to("#cottonImg2", 0.00001, {opacity: 0})
-.to("#cottonImg3", 1, {y: 400}, "=-0.75")
+.to("#cottonImg3", 2, {y: 400}, "=-0.75")
 .to("#cottonImg3", 0.00001, {opacity: 0})
-.to("#cottonImg4", 1, {y: 400}, "=-0.75")
+.to("#cottonImg4", 2, {y: 400}, "=-0.75")
 .to("#cottonImg4", 0.00001, {opacity: 0})
-.to("#cottonWaterText", 1, {y: -200}, "=-2")
+.to("#cottonWaterText", 2, {y: "-50vh"}, "=-2")
 ;
 
 const cottonWaterpinScene = new ScrollMagic.Scene({
     triggerElement: "#cottonWater",
     triggerHook: 0,
     duration: "250%",
-    offset: "100"
+    offset: "120"
 })
 .setPin("#cottonWater")
 .setTween(cottonWaterPin)
@@ -468,12 +632,13 @@ const cottonWaterpinScene = new ScrollMagic.Scene({
 
 
 
-waterPin.to("#waterTitle", 1, {y: -200}, "first")
+waterPin.to("#waterTitle", 1, {y: -150}, "first")
 .to("#waterImg", 1, {y: -400}, "first")
 .from("#waterText", 0.75, {y: 1000}, "=-0.75")
 .to("body", 1, {backgroundColor: "#162D93"}, "first")
-
-;
+.to("#waterImg", 1, {y: -450}, "last")
+.to("#waterText", 1, {y: -100}, "last")
+.to("#waterTitle", 1, {y: -250}, "last");
 
 const waterSectionPinScene = new ScrollMagic.Scene({
     triggerElement: "#waterIntro",
@@ -514,6 +679,9 @@ const addsUpToCo2PinScene = new ScrollMagic.Scene({
 .setTween(addsUpToCo2Pin)
 .addTo(controller)
 .addIndicators({name: "addsUpToCo2Pin pin scene"});
+
+
+
 
 
 addsUpToCo2.to("#threeThingsCo2Text", 1, {y: -120})
@@ -567,7 +735,6 @@ polyesterPin
 .from("#clothingLabel", 0.5, {y: "-1800"}, "first")
 
 
-
 const polyesterPinScene  = new ScrollMagic.Scene({
     triggerElement: "#polyester",
     triggerHook: 0,
@@ -591,8 +758,7 @@ co2Pin.from("#smokeVideo", 0.25, {opacity: "0"})
 .from("#co2Text4", 0.000001, {opacity: "0"})
 .to("#co2Text4", 0.4, {opacity: "1"})
 .to("body", 0.1, {backgroundColor: "#F77600"})
-.to("#smokeVideo", 0.1, {opacity: "0"})
-;
+.to("#smokeVideo", 0.1, {opacity: "0"});
 
 const co2PinScene = new ScrollMagic.Scene({
     triggerElement: "#co2",
@@ -604,8 +770,7 @@ const co2PinScene = new ScrollMagic.Scene({
 .addTo(controller)
 .addIndicators({name: "co2 scene"});
 
-impact
-.from("#impactText", 1, {y:400}, "first")
+impact.from("#impactText", 1, {y:400}, "first")
 
 const impactScene = new ScrollMagic.Scene({
     triggerElement: "#impact",
@@ -615,6 +780,7 @@ const impactScene = new ScrollMagic.Scene({
 .setTween(impact)
 .addTo(controller)
 .addIndicators({name: "impact scene"});
+
 
 impactHugeText
 .from("#hugeText", 0.001, {opacity:0}, "first");
@@ -651,21 +817,6 @@ const impactPinScene = new ScrollMagic.Scene({
 .addTo(controller)
 .addIndicators({name: "impact pin scene"});
 
-
-/*
-
-const questionEvolvePinScene = new ScrollMagic.Scene({
-    triggerElement: "#questionEvolve",
-    triggerHook: 0,
-    duration: "100%"
-})
-.setPin("#questionEvolve")
-.setTween(questionEvolvePin)
-.addTo(controller)
-.addIndicators({name: "pin questionEvolve scene", indent: 300});
-
-
-*/
 questionEvolve.to("body", 0.15, {backgroundColor: "black"}, "first")
 .to('#defineFFText1', 0.5, {y: -80}, "first")
 .to('#defineFFText2', 0.5, {y: -120}, "first")
@@ -748,7 +899,7 @@ massProducePin.to("#shirtsImg1", 1, {y: "-250vh"}, "first")
 .from("#shirtsImg3", 1, {y: "-400vh"}, "=-0.75")
 .from("#massBinText", 0.5, {x: "100vw"}, "=-0.75")
 .from('#binImg', 1, {y: "50vh"}, "=-0.75")
-.from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-100vh) rotate(-90deg"}, "fourth ")
+.from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-200vh) rotate(-90deg"}, "fourth ")
 .to("#bagImg", 0.00001, {opacity: 0}, "fourth")
 .to("#shirtsImg3", 1, {opacity: "0"}, "fourth")
 .to("#shirtsImg2", 1, {opacity: "0"}, "fourth")
@@ -848,21 +999,6 @@ const pinOldFashionScene = new ScrollMagic.Scene({
 
 
 
-
-
-
-intro.from("#introText", 0.4, {y: -200}, "first")
-.from("#introText", 1, {opacity: 0}, "first")
-
-
-
-
-const introScene = new ScrollMagic.Scene({
-    triggerElement: "#introSection"
-})
-.setTween(intro)
-.addTo(controller)
-.addIndicators({name: "intro scene"});
 
 
 introPin.to("#introText", 1, {y: -100, color: "#FB5430"});
