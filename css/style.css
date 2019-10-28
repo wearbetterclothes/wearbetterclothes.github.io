@@ -8,7 +8,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background: #77b3b4;
+    background: #5900ac;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 .preload img{
-    width: 70vw;  
+    width: 30vw;  
     height: auto; 
     margin: 0 auto; 
 
@@ -50,7 +50,6 @@ body{
 section{
     height: 100vh !important;
     display: flex;
-    
     justify-content: center;
 }
 
@@ -112,25 +111,37 @@ i:hover{
     width: 100%;
 }
 
+
+
+#map2Img{
+    transform: rotate(20deg);
+    width: 40vw !important;
+    left: 80vw;
+    bottom: 25vh;
+    z-index: 1;
+}
+
 #glassImg{
-    transform: rotate(95deg);
-    width: 40% !important;
-    right: 35vw;
-    bottom: 5vw;
+    transform: rotate(30deg);
+    width: 40vw !important;
+    left: 35vw;
+    bottom: 8vw;
+    z-index: 1;
 }
 
 #mapImg{
-    transform: rotate(190deg);
-    width: 80% !important;
+    transform: rotate(300deg);
+    width: 60vw !important;
     right: 20vw;
-    top: 5vw;
+    bottom: 15vw;
 }
 
 #bookImg{
-    transform: rotate(220deg);
-    width: 100% !important;
-    left: 75vw;
-    bottom: 20vw;
+    transform: rotate(30deg);
+    width: 50vw !important;
+    right: 20vw;
+    top: 10vh;
+    z-index: -1;
 }
 
 #endImgLogoBox{
@@ -252,7 +263,7 @@ i {
 
 #headerLogoBox{
     margin: 0 20vw;
-    margin-bottom: 5vw;
+    margin-bottom: 10vw;
 }
 
 #headerLogoBox img{
@@ -261,12 +272,12 @@ i {
 }
 
 #headingAndButtonsBox{
-    margin-top: 5vw;
+    margin-top: 3vw;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-rows: 1fr 2fr 1fr;
-    margin-bottom: 5vw;
+    margin-bottom: 9vw;
 }
 
 #buttonBox{

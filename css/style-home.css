@@ -1,0 +1,306 @@
+@font-face{
+    font-family: "Altero";
+    src: url("font/Altero.otf");
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    
+    background-color: #FFAE02;
+
+    overflow-x: hidden;
+}
+
+
+img{
+    height: auto;
+    width: 100%;
+}
+
+h2, h1, h3, button, h4{
+    font-family: 'Altero';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2{font-size: 2vw; line-height: 3.5vw;}
+
+h1{font-size: 3.5vw; line-height: 6vw; margin: 0}
+
+h3{ font-size: 1.5vw;}
+
+h4{font-size: 6vw; line-height: 8vw; margin: 0 2vw;}
+
+button{
+    height: 3.5vw;    
+    background-color: transparent;
+    border: 0.2vw solid black;
+    border-radius: 80px;
+    font-size: 1.1vw;
+    padding-bottom: 0.4vw;
+}
+
+input[type="text"]{
+    height: 3vw;    
+    border: 0.2vw solid black;
+    border-radius: 80px;
+    font-size: 1.1vw;
+    padding-left: 1vw;
+    font-family: Arial, sans-serif;
+}
+
+button:hover, input[type="text"]:focus{
+    box-shadow: 0px 0.5vw 1vw 0 rgba(0,0,0,0.44);
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+i:hover{
+    box-shadow: 0.25vw 0.25vw 0.35vw 0 rgba(0,0,0,0.34);
+}
+
+::placeholder{
+    font-style: italic;
+}
+
+
+.sectionContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 11vw;
+    width: auto !important;
+}
+
+.text-center{
+    text-align: center;
+    flex-direction: column;
+    margin: 0 15vw;
+}
+
+
+
+#navbar{
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+    top: 0px;
+    transition: background-color 0.5s;
+    display: grid;
+    align-items: center;
+    padding: 0 1vw;
+    z-index: 1;
+    height: 19vh;
+    width: 96vw;
+  }
+  
+  #navbar a{
+	font-family: "altero";
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+
+  #navbar ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .navbarLinkText{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbarLink{
+      float: right;
+  }
+  .navbarLogo{
+      float: left;
+  }
+
+  .navbarLogo img{
+    width: 15vw;
+    bottom: 0.5vw;
+    position: relative;
+}
+  
+  .navbarLink a:hover {
+    color: red;
+  }
+
+  .active:hover{
+      color: white !important;
+  }
+  
+  .active {
+    mix-blend-mode: difference;
+    text-shadow: 0.1vw 0.1vw 0 red;
+  }
+
+header{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100%;
+    position: relative;
+    
+    padding-bottom: 10vw;
+}
+
+.overlap-contents * {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+}
+
+.overlap-contents{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+#map2Img{
+    transform: rotate(20deg);
+    width: 40vw !important;
+    left: 78vw;
+    bottom: 10vh;
+    z-index: 1;
+}
+
+#glassImg{
+    transform: rotate(20deg);
+    width: 40vw !important;
+    left: 70vw;
+    top: 5vw;
+    z-index: 1;
+}
+
+#mapImg{
+    transform: rotate(300deg);
+    width: 60vw !important;
+    right: 20vw;
+    bottom: 5vw;
+}
+
+#bookImg{
+    transform: rotate(30deg);
+    width: 50vw !important;
+    right: 25vw;
+    top: 25vh;
+    z-index: -1;
+}
+
+#endImgLogoBox{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#headerImgBox, #endImgBox{
+    z-index: -2;
+    position: absolute;
+    width: 100vw;
+}
+
+
+
+#headerLogoBox img{
+    width: 40vw;
+    height: auto;
+    position: relative;
+}
+
+#headingAndButtonsBox{
+    margin-top: 10vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 3fr 1fr 1fr;
+    margin-bottom: 12vw;
+    text-align: center;
+}
+
+#headingAndButtonsBox h4{
+    width: 60vw;
+}
+
+#buttonBox{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10vw 1vw;
+    grid-gap: 2vw;
+}
+
+
+/*-------------------------------grid photos ----------------------------*/
+
+.grid-item{
+    width: 10%;
+    margin-top: -1vw;
+    margin-bottom: -1vw;
+}
+
+.--width2{
+	width: 20%
+}
+
+.--width3{
+	width: 40%;
+}
+
+.--width4{
+	width: 30%;
+}
+
+
+
+#photoGalleryGridBox{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 10vw;
+    text-align: center;
+    width: 100%;
+}
+
+#photoGalleryGrid{
+	display:flex;
+	justify-content: center;
+    z-index: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#photoGalleryText{
+    color: aquamarine;
+    z-index: 1;
+    mix-blend-mode: difference;
+    text-shadow: 0 0 0 red;
+}
+
+#featuredImages{
+    height: auto !important;
+}
+
+#searchBox{
+    margin-top: 3vw;
+}

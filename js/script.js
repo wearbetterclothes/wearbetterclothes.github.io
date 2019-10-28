@@ -1,18 +1,15 @@
 
-
 function scrollDown() {
     document.getElementById('introSection').scrollIntoView({ block: 'start',  behavior: 'smooth' });
 }
 
 function goToSearchPage(){
-    window.location.href="main.html"
+    window.location.href="home.html"
 }
 
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
 
 window.onload = () =>{
+    
     const preload = document.querySelector(".preload");
     const body = document.querySelector("body");
    
@@ -28,35 +25,6 @@ var parallaxInstance2 = new Parallax(scene2);
 
 var scene3 = document.querySelector('#endImgBox');
 var parallaxInstance3 = new Parallax(scene3);
-
-var prevScrollPos = 0;
-var scrollCount = 0;
-var scrollUp = false;
-window.addEventListener('scroll', () =>{
-    
-    if(prevScrollPos > window.scrollY){
-        scrollUp = true
-    }
-    else{
-        scrollUp = false;
-    }
-
-    if(sup1 != undefined){
-        if(scrollCount == 10){
-            if(scrollUp){
-                sup1.move_relative(1);
-            }
-            else{
-                sup1.move_relative(-1);
-            } 
-            scrollCount = 0;
-        }
-        scrollCount++;
-        prevScrollPos = window.scrollY;
-    }
-    
-});
-
 
 
 
@@ -863,21 +831,21 @@ const defineFFPinScene = new ScrollMagic.Scene({
 
 
 
-massProducePin.to("#shirtsImg1", 1, {y: "-250vh"}, "first")
+massProducePin.to("#shirtsImg1", 3, {y: "-250vh"}, "first")
 .from('#massProducedText', 0.5, {x: "100vw"}, "first")
 .to("#shirtsImg1", 0.00001, {opacity: 0}, "second")
 .from("#bagImg", 0.00001, {opacity: 0}, "second")
 .from("#shirtsImg2", 0.00001, {opacity: 0}, "second")
-.from("#shirtsImg2", 1, {y: "-400vh"}, "second")
-.to("#shirtsImg2", 1, {y: "50vh"}, "second")
+.from("#shirtsImg2", 3, {y: "-400vh"}, "second")
+.to("#shirtsImg2", 3, {y: "50vh"}, "second")
 .from("#bagImg", 1, {y: "100vh"}, "second")
 .from('#massPurchasedText', 0.5, {x: "100vw"}, "second")
 .from('#massAndText', 0.0001, {opacity: 0}, "=-0.33")
 .to("#bagImg", 1, {y: "-200vh"}, "third")
 .from("#shirtsImg3", 0.00001, {opacity: 0}, "third")
-.from("#shirtsImg3", 1, {y: "-400vh"}, "=-0.75")
-.from("#massBinText", 0.5, {x: "100vw"}, "=-0.75")
-.from('#binImg', 1, {y: "50vh"}, "=-0.75")
+.from("#shirtsImg3", 3, {y: "-400vh"}, "=-1")
+.from("#massBinText", 0.5, {x: "100vw"}, "=-1")
+.from('#binImg', 1, {y: "50vh"}, "=-2.5")
 .from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-200vh) rotate(-90deg"}, "fourth ")
 .to("#bagImg", 0.00001, {opacity: 0}, "fourth")
 .to("#shirtsImg3", 1, {opacity: "0"}, "fourth")
@@ -1006,4 +974,3 @@ const headerScene = new ScrollMagic.Scene({
 })
 .setTween(header)
 .addTo(controller);
-

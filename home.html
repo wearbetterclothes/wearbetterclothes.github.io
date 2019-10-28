@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - wearbetterclothes</title>
+    <link rel="stylesheet" href="css/style-home.css">
+</head>
+<body>
+    <header>
+        <div id="navbar" >
+            <ul >
+                <li class="navbarLink"><a class="navbarLinkText" onclick="scrollTo(this);">LEARN</a></li>
+                <li class="navbarLink"><a class="navbarLinkText" onclick="scrollTo(this);">COOL PHOTOS </a></li>
+                <li class="navbarLink"><a class="navbarLinkText active" onclick="scrollTo(this);">SEARCH</a></li>
+                <li class="navbarLogo"><a class="navbarLinkText" onclick="scrollTo(this);"><img src="images/logo-shadow.png"></a></li>
+            </ul>
+        </div>	
+        <div id="endImgBox" class="overlap-contents">
+            <div data-depth="0.2">
+                <img id="glassImg" src="images/item/magnify.png">
+            </div>
+            <div data-depth="0.1" style="z-index: -3;">
+                <img id="mapImg" src="images/item/map.png">
+            </div>
+            <div data-depth="0.15" style="z-index: -3;">
+                <img id="bookImg" src="images/item/book.png">
+            </div>
+            <div data-depth="0.15" style="z-index: -3;">
+                <img id="map2Img" src="images/item/map2.png">
+            </div>
+        </div>
+        <div id="headingAndButtonsBox" class="sectionContents">
+            <h4>FIND A THRIFT STORE NEAR YOU</h4>
+            <div id="searchBox">
+                <h2>WHERE ARE YOU RIGHT NOW?</h2>
+                <div id="buttonBox">
+                    <input type="text" placeholder="Search for a location">
+    
+                    <BUTTON onclick='goToSearchPage()'>Use my location</BUTTON>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <div id="arrowBox">
+                    <i class="down" onclick="scrollDown()"></i>
+                </div>
+            </div>
+            
+        </div>
+
+    </header>
+
+    <section id="featuredImages">
+        <div  id="photoGalleryGridBox">
+            <div id="photoGalleryText">
+                <h4>DO YOU #WEARBETTERCLOTHES ?	</h4>
+                <h1 style="margin-top: 5vw;"> GET FEATURED USING the hashtag <br> ON INSTAGRAM </h1>
+            </div>
+            
+            <div id="photoGalleryGrid" >
+                <img class="grid-item " data-depth="0.1"src="images/home/img6.jpg">
+                <img class="grid-item --width3" data-depth="0.2" src="images/home/img4.jpg">
+                <img class="grid-item --width2" style="z-index: 4" data-depth="0.4" src="images/home/img10.jpg">
+                <img class="grid-item --width2"  data-depth="0.2"  data-offset="-150" src="images/home/img2.jpg">
+                
+                <img class="grid-item --width3" style="z-index: 5"  data-depth="0.5" src="images/home/img5.jpg">
+                <img class="grid-item"  data-depth="0.1"   src="images/home/img13.jpg">
+                <img class=" grid-item --width3" data-depth="0.2" src="images/home/img7.jpg">
+                
+                <img class="grid-item --width2" style="z-index:5" data-offset="-150" data-depth="0.5"  src="images/home/img1.jpg">
+                
+                <img class="grid-item --width3" style="z-index: 3" data-offset="-100" data-depth="0.3" src="images/home/img9.jpg">
+                <img class="grid-item --width4"  data-depth="0.3"  src="images/home/img12.jpeg">
+                <img class="grid-item " data-depth="0.1" src="images/home/img3.jpg">
+                <img class="grid-item --width2" data-depth="0.2"  src="images/home/img8.jpg" style="z-index: 1">
+                <img class="grid-item --width2" data-depth="0.1"  src="images/home/img11.jpg" style="z-index: 0">
+            </div>
+        </div>
+    </section>
+
+    <section id="learnFastFashion" class="sectionCenter text-center">
+        <h4>What is <br> fast fashion?</h4>
+        <h2>learn about the impacts of fast fashion on our planet</h2>
+        <button>Let's go!</button>
+    </section>
+
+    <script src="js/libgif.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="js/script-home.js"></script>
+</body>
+</html>
