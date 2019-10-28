@@ -8,6 +8,10 @@ function goToSearchPage(){
     window.location.href="main.html"
 }
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 window.onload = () =>{
     const preload = document.querySelector(".preload");
     const body = document.querySelector("body");
@@ -132,7 +136,7 @@ var benefits = new TimelineMax();
 var benefitsPin = new TimelineMax();
 
 var endPin = new TimelineMax();
-
+var end = new TimelineMax();
 
 
 
@@ -153,11 +157,19 @@ endPinScene = new ScrollMagic.Scene({
 })
 .setPin("#end")
 .setTween(endPin)
-.addTo(controller)
-.addIndicators({name: "end pin scene"});
+.addTo(controller);
 
 
+end.to("body", 1, {backgroundColor: "#8500ff"})
 
+endScene = new ScrollMagic.Scene({
+    triggerElement: "#end",
+    triggerHook: 1,
+    duration: "100%"
+})
+.setTween(end)
+.addTo(controller);
+    
 
 
 benefits.to("#thriftingText", 1, {y:"-100vh"})
@@ -168,8 +180,7 @@ benefitsScene = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(benefits)
-.addTo(controller)
-.addIndicators({name: "benefits scene"});
+.addTo(controller);
     
 
 
@@ -193,8 +204,7 @@ benefitsPinScene = new ScrollMagic.Scene({
 })
 .setPin("#benefits")
 .setTween(benefitsPin)
-.addTo(controller)
-.addIndicators({name: "benefits pin scene"});
+.addTo(controller);
 
 
 
@@ -210,8 +220,7 @@ thriftingPinScene = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(thriftingPin)
-.addTo(controller)
-.addIndicators({name: "thriftingPin scene"});
+.addTo(controller);
 
 thriftingScene = new ScrollMagic.Scene({
     triggerElement: "#thrifting",
@@ -219,8 +228,7 @@ thriftingScene = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(thrifting)
-.addTo(controller)
-.addIndicators({name: "thrifting scene"});
+.addTo(controller);
     
 
 
@@ -238,8 +246,7 @@ whatToDoPinScene = new ScrollMagic.Scene({
 })
 .setPin("#whatToDo")
 .setTween(whatToDoPin)
-.addTo(controller)
-.addIndicators({name: "whatToDo pin scene"});
+.addTo(controller);
 
 
 
@@ -256,8 +263,7 @@ whatToDoScene = new ScrollMagic.Scene({
     offset: "-100vh"
 })
 .setTween(whatToDo)
-.addTo(controller)
-.addIndicators({name: "whatToDo scene"});
+.addTo(controller);
 
 
 
@@ -284,8 +290,7 @@ overTheYearsPinScene = new ScrollMagic.Scene({
 })
 .setPin("#overTheYears")
 .setTween(overTheYearsPin)
-.addTo(controller)
-.addIndicators({name: "overTheYears pin scene"});
+.addTo(controller);
 
 
 overTheYears.to("body", 15, {backgroundColor: "#148D62"}, "first")
@@ -311,8 +316,7 @@ overTheYearsScene = new ScrollMagic.Scene({
     offset: "-300vh"
 })
 .setTween(overTheYears)
-.addTo(controller)
-.addIndicators({name: "overTheYears scene"});
+.addTo(controller);
 
 
 
@@ -337,8 +341,7 @@ throwawayPinScene = new ScrollMagic.Scene({
 })
 .setPin("#throwAway")
 .setTween(throwawayPin)
-.addTo(controller)
-.addIndicators({name: "throwaway pin scene"});
+.addTo(controller);
 
 
 
@@ -358,8 +361,7 @@ const throwawayScene = new ScrollMagic.Scene({
     duration: "220%"
 })
 .setTween(throwaway)
-.addTo(controller)
-.addIndicators({name: "throwawayIntro scene"});
+.addTo(controller);
 
 
 
@@ -372,8 +374,7 @@ const humanCostChangeColour2= new ScrollMagic.Scene({
     triggerHook: 0.25, 
 })
 .setTween(humanCostText2)
-.addTo(controller)
-.addIndicators({name: "humanCostText2  scene"});
+.addTo(controller);
 
 
 humanCostText1.to("#onePercent", 0.000001, {color: "#8f0000"})
@@ -383,8 +384,7 @@ const humanCostChangeColour1= new ScrollMagic.Scene({
     triggerHook: 0.25
 })
 .setTween(humanCostText1)
-.addTo(controller)
-.addIndicators({name: "humanCostText1 pin scene"});
+.addTo(controller);
 
 
 
@@ -400,8 +400,7 @@ const humanCostPinScene = new ScrollMagic.Scene({
     duration: "300%"
 })
 .setTween(humanCostPin)
-.addTo(controller)
-.addIndicators({name: "humanCost pin scene"});
+.addTo(controller);
 
 
 dyeWaterPin.from("#dyeVideo", 2, {opacity: 0}, "first")
@@ -428,8 +427,7 @@ const dyePinSectionScene = new ScrollMagic.Scene({
 })
 .setPin("#dyeWater")
 .setTween(dyeWaterPin)
-.addTo(controller)
-.addIndicators({name: "dyeWater pin scene"});
+.addTo(controller);
 
 
 
@@ -470,8 +468,7 @@ const FiberPinSectionScene = new ScrollMagic.Scene({
 })
 .setPin("#fiber")
 .setTween(fiberWaterPin)
-.addTo(controller)
-.addIndicators({name: "fiber pin scene"});
+.addTo(controller);
 
 
 
@@ -528,8 +525,7 @@ threeYearsWaterPinScene = new ScrollMagic.Scene({
 })
 .setPin("#threeYearsWater")
 .setTween(threeYearsWaterPin)
-.addTo(controller)
-.addIndicators({name: "threeYearsWater pin scene"});
+.addTo(controller);
 
 
 
@@ -544,8 +540,7 @@ threeYearsWaterScene = new ScrollMagic.Scene({
     duration: "100%",
 })
 .setTween(threeYearsWater)
-.addTo(controller)
-.addIndicators({name: "threeYearsWater scene"});
+.addTo(controller);
 
 
 
@@ -578,8 +573,7 @@ const drinkingWaterPinScene = new ScrollMagic.Scene({
 })
 .setPin("#drinkingWater")
 .setTween(drinkingWaterPin)
-.addTo(controller)
-.addIndicators({name: "drinkingWaterPin pin scene"});
+.addTo(controller);
 
 
 
@@ -599,8 +593,7 @@ const cottonWaterScene = new ScrollMagic.Scene({
     duration: "100%",
 })
 .setTween(cottonWater)
-.addTo(controller)
-.addIndicators({name: "cottonWater scene"});
+.addTo(controller);
 
 cottonWaterPin
 .to("#soManyLiters", 3, {opacity: 1})
@@ -627,8 +620,7 @@ const cottonWaterpinScene = new ScrollMagic.Scene({
 })
 .setPin("#cottonWater")
 .setTween(cottonWaterPin)
-.addTo(controller)
-.addIndicators({name: "waterrrr cotton pin scene"});
+.addTo(controller);
 
 
 
@@ -648,8 +640,7 @@ const waterSectionPinScene = new ScrollMagic.Scene({
 })
 .setPin("#waterIntro")
 .setTween(waterPin)
-.addTo(controller)
-.addIndicators({name: "waterrrr intro pin scene"});
+.addTo(controller);
 
 
 
@@ -661,8 +652,7 @@ const waterIntroScene = new ScrollMagic.Scene({
     duration: "100%",
 })
 .setTween(waterIntro)
-.addTo(controller)
-.addIndicators({name: "addsUpTo scene"});
+.addTo(controller);
 
 
 
@@ -677,8 +667,7 @@ const addsUpToCo2PinScene = new ScrollMagic.Scene({
 })
 .setPin("#addsUpToCo2")
 .setTween(addsUpToCo2Pin)
-.addTo(controller)
-.addIndicators({name: "addsUpToCo2Pin pin scene"});
+.addTo(controller);
 
 
 
@@ -693,8 +682,7 @@ const addsUpToScene = new ScrollMagic.Scene({
     duration: "100%",
 })
 .setTween(addsUpToCo2)
-.addTo(controller)
-.addIndicators({name: "addsUpTo scene"});
+.addTo(controller);
 
 
 
@@ -721,8 +709,8 @@ const threeThingsCo2PinScene = new ScrollMagic.Scene({
 })
 .setPin("#threeThingsCo2")
 .setTween(threeThingsCo2Pin)
-.addTo(controller)
-.addIndicators({name: "threeThingsCo2Pin pin scene"});
+.addTo(controller);
+
 
 
 
@@ -742,8 +730,7 @@ const polyesterPinScene  = new ScrollMagic.Scene({
 })
 .setPin("#polyester")
 .setTween(polyesterPin)
-.addTo(controller)
-.addIndicators({name: "polyester pin scene"});
+.addTo(controller);
 
 
 
@@ -767,8 +754,7 @@ const co2PinScene = new ScrollMagic.Scene({
 })
 .setPin("#co2")
 .setTween(co2Pin)
-.addTo(controller)
-.addIndicators({name: "co2 scene"});
+.addTo(controller);
 
 impact.from("#impactText", 1, {y:400}, "first")
 
@@ -778,8 +764,7 @@ const impactScene = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(impact)
-.addTo(controller)
-.addIndicators({name: "impact scene"});
+.addTo(controller);
 
 
 impactHugeText
@@ -792,8 +777,7 @@ const impactHugeTextScene = new ScrollMagic.Scene({
     duration:"1%"
 })
 .setTween(impactHugeText)
-.addTo(controller)
-.addIndicators({name: "impact HUGE appear scene"});
+.addTo(controller);
 
 
 impactPin
@@ -814,8 +798,7 @@ const impactPinScene = new ScrollMagic.Scene({
 })
 .setPin("#impact")
 .setTween(impactPin)
-.addTo(controller)
-.addIndicators({name: "impact pin scene"});
+.addTo(controller);
 
 questionEvolve.to("body", 0.15, {backgroundColor: "black"}, "first")
 .to('#defineFFText1', 0.5, {y: -80}, "first")
@@ -833,8 +816,7 @@ const questionEvolveScene = new ScrollMagic.Scene({
     duration: "200%"
 })
 .setTween(questionEvolve)
-.addTo(controller)
-.addIndicators({name: "questionEvolve scene"});
+.addTo(controller);
 
 
 
@@ -852,8 +834,7 @@ const defineFFScene = new ScrollMagic.Scene({
     duration: "160%"
 })
 .setTween(defineFF)
-.addTo(controller)
-.addIndicators({name: "defineFF scene"});
+.addTo(controller);
 
 defineFFPin.from("#defineFFText2", 0.01, {opacity: 0}, "=0.25")
 .from("#defineFFText3", 0.01, {opacity: 0}, "=0.25")
@@ -866,8 +847,7 @@ const defineFFAutoScene = new ScrollMagic.Scene({
     offset: 300
 })
 .setTween(defineFFPin)
-.addTo(controller)
-.addIndicators({name: "auto defineFF scene", indent: 600});
+.addTo(controller);
 
 const defineFFPinScene = new ScrollMagic.Scene({
     triggerElement: "#defineFF",
@@ -875,8 +855,7 @@ const defineFFPinScene = new ScrollMagic.Scene({
     duration: "200%"
 })
 .setPin('#defineFF')
-.addTo(controller)
-.addIndicators({name: "pin defineFF scene", indent: 300});
+.addTo(controller);
 
 
 
@@ -912,8 +891,7 @@ const pinMassProduceScene = new ScrollMagic.Scene({
 })
 .setPin('#massProduce')
 .setTween(massProducePin)
-.addTo(controller)
-.addIndicators({name: "pin new fashion scene", indent: 300});
+.addTo(controller);
 
 
 
@@ -925,8 +903,7 @@ const massProduceScene = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(massProduce)
-.addTo(controller)
-.addIndicators({name: "massProduce scene"});
+.addTo(controller);
 
 
 
@@ -948,8 +925,7 @@ const newFashionScene = new ScrollMagic.Scene({
     triggerHook: 0.5
 })
 .setTween(newFashion)
-.addTo(controller)
-.addIndicators({name: "new fashion scene"});
+.addTo(controller);
 
 newFashionPin.from('#fashionStraightText', 1, {x: 800})
 
@@ -960,8 +936,7 @@ const pinNewFashionScene = new ScrollMagic.Scene({
 })
 .setPin("#newFashion")
 .setTween(newFashionPin)
-.addTo(controller)
-.addIndicators({name: "pin new fashion scene", indent: 300});
+.addTo(controller);
 
 
 
@@ -976,8 +951,7 @@ const oldFashionScene = new ScrollMagic.Scene({
     triggerHook: 1
 })
 .setTween(oldFashion)
-.addTo(controller)
-.addIndicators({name: "old fashion scene"});
+.addTo(controller);
 
 oldFashionPin.from('#oldFashionText', 1, {y:80}, "first")
 
@@ -990,8 +964,7 @@ const pinOldFashionScene = new ScrollMagic.Scene({
 })
 .setPin("#oldFashion")
 .setTween(oldFashionPin)
-.addTo(controller)
-.addIndicators({name: "pin old fashion scene", indent: 300});
+.addTo(controller);
 
 
 
@@ -1011,7 +984,6 @@ const pinIntroScene = new ScrollMagic.Scene({
 })
 .setPin("#introSection")
 .setTween(introPin)
-.addIndicators({name: "pin intro scene"})
 .addTo(controller);
 
 
@@ -1033,6 +1005,5 @@ const headerScene = new ScrollMagic.Scene({
     duration: "300%"
 })
 .setTween(header)
-.addTo(controller)
-.addIndicators({name: "header"});
+.addTo(controller);
 
