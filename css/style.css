@@ -1154,7 +1154,7 @@ video{
     width: 90%;
     height: auto;
     position: relative;
-    margin-bottom: 2vw;
+    margin-bottom: 0vw;
 }
 
 #end h1{
@@ -1163,6 +1163,10 @@ video{
 
 #thriftShopFinder h1{
     width: 90%;
+}
+
+#thriftShopFinder{
+    margin-top: 2vw;
 }
 
 #findThriftStore{
