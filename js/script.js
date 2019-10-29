@@ -4,8 +4,19 @@ function scrollDown() {
 }
 
 function goToSearchPage(){
-    window.location.href="home.html"
+    window.location.href="home.html";
 }
+
+function scrollToPos(e) {
+    if(e.id == "topButton"){
+        document.querySelector('header').scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    }
+    else if(e.id == "exitButton"){
+        window.location.href="home.html";
+    }
+}
+
+
 
 
 window.onload = () =>{
@@ -128,7 +139,7 @@ endPinScene = new ScrollMagic.Scene({
 .addTo(controller);
 
 
-end.to("body", 1, {backgroundColor: "#8500ff"})
+end.to("body", 1, {backgroundColor: "#6900ff"})
 
 endScene = new ScrollMagic.Scene({
     triggerElement: "#end",
@@ -167,8 +178,7 @@ benefitsPin.from("#benefits1", 1, {x: "150vw"})
 benefitsPinScene = new ScrollMagic.Scene({
     triggerElement: "#benefits",
     triggerHook: 0,
-    duration: "400%",
-    offset:"-150vh"
+    duration: "400%"
 })
 .setPin("#benefits")
 .setTween(benefitsPin)
@@ -245,7 +255,9 @@ overTheYearsPin.from("#grassVideo", 1, {opacity: 0}, "first")
 .to("#overTheYearsText2", 2, {opacity: 1}, "third")
 .to("#overTheYearsText2", 0.00001, {opacity: 0})
 .from("#overTheYearsText3", 0.00001, {opacity: 0})
-.to("#overTheYearsText3", 2, {opacity: 1}, "last")
+.to("#overTheYearsText3", 2, {opacity: 1})
+.to("#grassVideo", 1, {opacity: 0}, "last")
+.to("#overTheYearsText3", 1, {y: "-30vh"}, "last")
 
 
 
@@ -405,7 +417,7 @@ fiberWaterPin.from("#fiberVideo", 1, {opacity: 0}, "first")
 .to("#fiberVideo", 1, {y: -250}, "first")
 .to("#fiberText1", 1, {y: -150}, "first")
 .to("#fiberVideo", 1, {y: -350}, "second")
-.to("#fiberText1", 1, {y: -750}, "second")
+.to("#fiberText1", 1, {y: "-100vh"}, "second")
 .from("#fiberText2", 1, {y: 1000}, "second")
 .from("#fiberText3", 1, {y: 1000}, "second")
 .from("#fiberText4", 1, {y: 1000}, "second")
@@ -836,15 +848,15 @@ massProducePin.to("#shirtsImg1", 3, {y: "-250vh"}, "first")
 .to("#shirtsImg1", 0.00001, {opacity: 0}, "second")
 .from("#bagImg", 0.00001, {opacity: 0}, "second")
 .from("#shirtsImg2", 0.00001, {opacity: 0}, "second")
-.from("#shirtsImg2", 3, {y: "-400vh"}, "second")
-.to("#shirtsImg2", 3, {y: "50vh"}, "second")
+.from("#shirtsImg2", 3, {y: "-450vh"}, "second")
+.to("#shirtsImg2", 2, {y: "50vh"}, "second")
 .from("#bagImg", 1, {y: "100vh"}, "second")
 .from('#massPurchasedText', 0.5, {x: "100vw"}, "second")
-.from('#massAndText', 0.0001, {opacity: 0}, "=-0.33")
-.to("#bagImg", 1, {y: "-200vh"}, "third")
+.from('#massAndText', 0.0001, {opacity: 0}, "=-0.5")
+.to("#bagImg", 3, {y: "-200vh"}, "third")
 .from("#shirtsImg3", 0.00001, {opacity: 0}, "third")
-.from("#shirtsImg3", 3, {y: "-400vh"}, "=-1")
-.from("#massBinText", 0.5, {x: "100vw"}, "=-1")
+.from("#shirtsImg3", 3, {y: "-450vh"}, "=-1.5")
+.from("#massBinText", 0.5, {x: "100vw"}, "=-1.5")
 .from('#binImg', 1, {y: "50vh"}, "=-2.5")
 .from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-200vh) rotate(-90deg"}, "fourth ")
 .to("#bagImg", 0.00001, {opacity: 0}, "fourth")
@@ -895,7 +907,7 @@ const newFashionScene = new ScrollMagic.Scene({
 .setTween(newFashion)
 .addTo(controller);
 
-newFashionPin.from('#fashionStraightText', 1, {x: 800})
+newFashionPin.from('#fashionStraightText', 1, {x: "100vw"})
 
 const pinNewFashionScene = new ScrollMagic.Scene({
     triggerElement: "#newFashion",
@@ -912,6 +924,7 @@ const pinNewFashionScene = new ScrollMagic.Scene({
 
 
 oldFashion.to("#introText", 0.25, {y: -250}, "first")
+
 
 
 const oldFashionScene = new ScrollMagic.Scene({
@@ -938,8 +951,19 @@ const pinOldFashionScene = new ScrollMagic.Scene({
 
 
 
+var navigationBox = new TimelineMax();
+
+navigationBox.from("#navigationBox", 0.25, {opacity: 0}, "first")
 
 
+const navigationBoxScene = new ScrollMagic.Scene({
+    triggerElement: "#introSection",
+    triggerHook: 0
+})
+.setTween(navigationBox)
+.addTo(controller);
+
+oldFashionPin.from('#oldFashionText', 1, {y:80}, "first")
 
 
 introPin.to("#introText", 1, {y: -100, color: "#FB5430"});

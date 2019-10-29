@@ -3,6 +3,49 @@
     src: url("font/Altero.otf");
 }
 
+@font-face{
+    font-family: "Apercu";
+    src: url("font/Apercu");
+}
+
+
+
+.preload{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(124, 0, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    transition: opacity 0.5s ease;
+    flex-direction: column;
+    padding-bottom: 30vh;
+}
+
+.preload img{
+    
+    width: 30vw;  
+    height: auto; 
+    margin: 0 auto; 
+    
+    position: relative;
+    bottom: 5vh;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 section{
     display: flex;
     height: 100vh;
@@ -30,6 +73,15 @@ h2, h1, h3, button, h4{
     text-transform: uppercase;
 }
 
+p, footer a{
+    font-family: 'Apercu';
+    color: rgb(173, 173, 173);
+    word-spacing: 2%;
+    margin: 0;
+}
+
+.attribution{ color: rgb(68, 68, 68) !important; }
+
 h2{font-size: 2vw; line-height: 3.5vw;}
 
 h1{font-size: 3.5vw; line-height: 6vw; margin: 0}
@@ -44,7 +96,8 @@ button{
     border: 0.2vw solid black;
     border-radius: 80px;
     font-size: 1.1vw;
-    padding-bottom: 0.4vw;
+    padding-bottom: 0.2vw;
+    cursor: pointer;
 }
 
 input[type="text"]{
@@ -96,69 +149,93 @@ i:hover{
     position: -webkit-sticky; /* Safari */
     position: fixed;
     top: 0px;
-    transition: background-color 0.5s;
+    transition: top 0.25s ease-in;
     display: grid;
     align-items: center;
     padding: 0 1vw;
     z-index: 1;
-    height: 19vh;
+    height: 17vh;
     width: 96vw;
-  }
+}
+
+.show {
+    top: 0px !important;
+}
+
+.hide{
+    top: -20vh !important;
+}
   
-  #navbar a{
-	font-family: "altero";
+#navbar a{
+    font-family: "altero";
     font-weight: 100;
     text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1vw;
 }
 
 
-  #navbar ul{
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-  }
-  
-  .navbarLinkText{
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 8% 8% 8% 8% 36% 8% 8% 8% 8% ;
+}
+
+.navbarLinkText{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1vw 1vw;
     text-decoration: none;
-  }
-  
-  .navbarLink{
-      float: right;
-  }
-  .navbarLogo{
-      float: left;
-  }
+}
 
-  .navbarLogo img{
-    width: 15vw;
-    bottom: 0.5vw;
+
+
+#loginListItem{
+    grid-column: 9;
+}
+
+
+
+.navbarLogo img{
+    width: 17vw;
+    bottom: 1vw;
     position: relative;
 }
-  
-  .navbarLink a:hover {
-    color: red;
-  }
 
-  .active:hover{
-      color: white !important;
-  }
-  
-  .active {
+.navbarLink a:hover {
+    color: red;
+}
+
+.active:hover{
+    color: rgb(145, 145, 145) !important;
+}
+
+.active {
     mix-blend-mode: difference;
-    text-shadow: 0.1vw 0.1vw 0 red;
-  }
+    text-shadow: 0.15vw 0.15vw 0 red;
+}
 
 header{
     height: 100vh;
     display: grid;
     grid-template-rows: 100%;
     position: relative;
-    
+
     padding-bottom: 10vw;
+}
+
+footer{
+    background-color: rgb(10, 10, 10);
+    padding: 1vw 2vw ;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .overlap-contents * {
@@ -173,6 +250,13 @@ header{
     grid-template-rows: 1fr;
 }
 
+#compassImg{
+    transform: rotate(-50deg);
+    width: 20vw !important;
+    left: 5vw;
+    bottom: 8vh;
+    z-index: 1;
+}
 
 #map2Img{
     transform: rotate(20deg);
@@ -183,7 +267,7 @@ header{
 }
 
 #glassImg{
-    transform: rotate(20deg);
+    transform: rotate(40deg);
     width: 40vw !important;
     left: 70vw;
     top: 5vw;
@@ -220,14 +304,8 @@ header{
 
 
 
-#headerLogoBox img{
-    width: 40vw;
-    height: auto;
-    position: relative;
-}
-
 #headingAndButtonsBox{
-    margin-top: 10vw;
+    margin-top: 12vw;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -238,6 +316,13 @@ header{
 
 #headingAndButtonsBox h4{
     width: 60vw;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+#headingAndButtonsBox h2{
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
 }
 
 #buttonBox{
@@ -248,6 +333,27 @@ header{
     flex-direction: column;
     padding: 0 10vw 1vw;
     grid-gap: 2vw;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+#icons{
+    position: absolute;
+}
+
+#icons img{
+ position: relative;
+ bottom: 0.35vw;
+ width: 2.5vw;
+}
+#searchIcon{
+    left: 28vw;
+    cursor: pointer;
+}
+
+#locationIcon{
+    left: 49vw;
+    z-index: -2;
 }
 
 
@@ -294,13 +400,68 @@ header{
     color: aquamarine;
     z-index: 1;
     mix-blend-mode: difference;
-    text-shadow: 0 0 0 red;
+    text-shadow: 0 0 0 rgb(255, 0, 235);
 }
 
-#featuredImages{
+#gallerySection{
     height: auto !important;
 }
 
 #searchBox{
     margin-top: 3vw;
+}
+
+#learnFastFashion h4{
+    color: #bb61ff;
+
+}
+
+#learnFastFashion h2{
+    width: 50vw;
+    color: #bb61ff;
+    margin-top: 3vw;
+}
+
+#learnFastFashion button{
+    margin-top: 3vw;
+    width: 20vw;
+}
+
+#learnImages{
+    position: absolute;
+    z-index: -5;
+}
+
+#learnImages img{
+    position: relative;
+}
+
+#earthImg{
+    width: 40vw;
+    bottom: 3vw;
+    right: 35vw;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#shirtImg{
+    width: 35vw;
+    top: 10vw;
+    left: 35vw;
+    transform: rotate(-10deg);
+}
+#jeansImg{
+    width: 30vw;
+    top: 15vw;
+    left: 43vw;
+    transform: rotate(20deg);
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }

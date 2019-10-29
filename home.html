@@ -6,29 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home - wearbetterclothes</title>
     <link rel="stylesheet" href="css/style-home.css">
+    <link rel="stylesheet" href="css/animate.css">
+
 </head>
 <body>
+
+    <div class="preload">
+        <img  id="headerLogoImg" src="images/logo-shadow.png">
+        <h3 style="margin-bottom: 15vw;">Loading...</h3>
+    </div>
+
     <header>
-        <div id="navbar" >
+        <div id="navbar" class="show" >
             <ul >
-                <li class="navbarLink"><a class="navbarLinkText" onclick="scrollTo(this);">LEARN</a></li>
-                <li class="navbarLink"><a class="navbarLinkText" onclick="scrollTo(this);">COOL PHOTOS </a></li>
-                <li class="navbarLink"><a class="navbarLinkText active" onclick="scrollTo(this);">SEARCH</a></li>
-                <li class="navbarLogo"><a class="navbarLinkText" onclick="scrollTo(this);"><img src="images/logo-shadow.png"></a></li>
+                <li class="navbarLink"><a id="search" class="navbarLinkText" onclick="scrollToPos(this);">SEARCH</a></li>
+                <li class="navbarLink"><a id="gallery" class="navbarLinkText" onclick="scrollToPos(this);">GALLERY</a></li>    
+                <li class="navbarLink"><a id="learn" class="navbarLinkText" onclick="scrollToPos(this);">LEARN</a></li>    
+                <br>
+                
+                
+
+                <li class="navbarLogo"><a id="home" class="navbarLinkText" onclick="scrollToPos(this);"><img src="images/logo-shadow.png"></a></li>
+
+                <li class="navbarLink" id="loginListItem"><a id="login" class="navbarLinkText" onclick="scrollToPos(this);">LOGIN</a></li>
+
             </ul>
         </div>	
         <div id="endImgBox" class="overlap-contents">
             <div data-depth="0.2">
                 <img id="glassImg" src="images/item/magnify.png">
             </div>
-            <div data-depth="0.1" style="z-index: -3;">
+            <div data-depth="0.1" style="z-index: -2;">
                 <img id="mapImg" src="images/item/map.png">
             </div>
-            <div data-depth="0.15" style="z-index: -3;">
+            <div data-depth="0.15" style="z-index: -1;">
                 <img id="bookImg" src="images/item/book.png">
             </div>
             <div data-depth="0.15" style="z-index: -3;">
                 <img id="map2Img" src="images/item/map2.png">
+            </div>
+            <div data-depth="0.125" style="z-index: -2;">
+                <img id="compassImg" src="images/item/compass.png">
             </div>
         </div>
         <div id="headingAndButtonsBox" class="sectionContents">
@@ -37,8 +55,11 @@
                 <h2>WHERE ARE YOU RIGHT NOW?</h2>
                 <div id="buttonBox">
                     <input type="text" placeholder="Search for a location">
-    
-                    <BUTTON onclick='goToSearchPage()'>Use my location</BUTTON>
+                    <div id="icons">
+                        <img onclick="{window.location.href='https://xd.adobe.com/view/b96a3371-0aca-4392-7275-95e6412b225a-cf5b/screen/512f5892-2554-4836-862f-bfd2efa0a837/search-home?fullscreen'}" id="searchIcon" src="images/icons/search-icon.png">
+                        <img id="locationIcon" src="images/icons/location-icon.png">
+                    </div>
+                    <BUTTON onclick="{window.location.href='https://xd.adobe.com/view/b96a3371-0aca-4392-7275-95e6412b225a-cf5b/screen/512f5892-2554-4836-862f-bfd2efa0a837/search-home?fullscreen'}">Use my location</BUTTON>
                 </div>
             </div>
             
@@ -52,7 +73,7 @@
 
     </header>
 
-    <section id="featuredImages">
+    <section id="gallerySection">
         <div  id="photoGalleryGridBox">
             <div id="photoGalleryText">
                 <h4>DO YOU #WEARBETTERCLOTHES ?	</h4>
@@ -80,11 +101,29 @@
         </div>
     </section>
 
-    <section id="learnFastFashion" class="sectionCenter text-center">
-        <h4>What is <br> fast fashion?</h4>
-        <h2>learn about the impacts of fast fashion on our planet</h2>
-        <button>Let's go!</button>
+    <section id="learnFastFashion" >
+        <div class="sectionContents text-center">
+            <h4>What is <br> fast fashion?</h4>
+            <h2>learn about the impacts of fast fashion on our planet</h2>
+            <button id="goToScrollStory" onclick="scrollToPos(this)">Let's go!</button>
+        </div>
+        <div id="learnImages" class="overlap-contents">
+            <div data-depth="0.3">
+                <img id="earthImg" src="images/item/earth.png">
+            </div>
+            <div data-depth="0.1">
+                <img id="shirtImg" src="images/item/shirt.png">
+            </div>
+            <div data-depth="0.2">
+                <img id="jeansImg" src="images/item/jeansFallingImg.png">
+            </div>
+        </div>
     </section>
+
+    <footer>
+        <p>Project By <a href="https://miryachan.github.io/">Mirya Chan</a></p><br>
+        <p class="attribution">See <a class="attribution" href="credit.txt">content attribution</a></p>
+    </footer>
 
     <script src="js/libgif.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>

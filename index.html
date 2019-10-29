@@ -13,8 +13,13 @@
     <body>
         
         <div class="preload">
-            <img style="width: 60%;" id="headerLogoImg" src="images/logo-shadow.png">
-            <h3 style="margin-bottom: 15vw;">[insert cool sentence for loading screen here]</h3>
+            <img  id="headerLogoImg" src="images/logo-shadow.png">
+            <h3 style="margin-bottom: 15vw;">Loading...</h3>
+        </div>
+
+        <div id="navigationBox">
+            <button id="topButton" onclick="scrollToPos(this)"><img src="images/icons/top-icon.png"></button>
+            <button id="exitButton" onclick="scrollToPos(this)"><img src="images/icons/exit-icon.png"></button>
         </div>
 
         <header>
@@ -74,7 +79,7 @@
         </section>
         <section id="oldFashion" >
             <div class="sectionContents imageLeftTextRight">
-                <div class="imageBox">
+                <div class="imageBox ">
                     <img id="crownImg"src="images/item/crown.png">
                     <img id="ringImg"src="images/item/ring-medival.png">
                     <img id="necklaceImg" src="images/item/necklace-medival.png">
@@ -103,7 +108,7 @@
 
         <section id="massProduce">
             <div class="sectionContents imageLeftTextRight">
-                <div class="imageBox" >
+                <div class="imageBox overlap-contents" >
                     <img id="shirtsImg1"src="images/item/shirts.png">
                     <img id="shirtsImg2"src="images/item/shirts.png">
                     <img id="shirtsImg3"src="images/item/shirts.png">
@@ -170,7 +175,7 @@
                 <h4 id="co2Heading" style="color: white">CO2 EMISSION</h4>
 
                 <div id="co2Text">
-                    <h2 id="co2Text2">the apparel industry accounts for</h2>
+                    <h2 id="co2Text2">apparel industry accounts for</h2>
                     <h4 id="co2Text3">10%</h4>
                     <h2 id="co2Text4">of <span id="global" style="color: rgb(197, 4, 31);"> global</span>  carbon  emissions</h2>
                 </div>
@@ -179,7 +184,7 @@
         </section>
 
         <section id="polyester">
-            <div id="polyesterSection" style="margin: 0 7vw; " class="sectionContents text-center red-text">
+            <div id="polyesterSection" class="sectionContents text-center red-text">
                 <div style="grid-row: 1; grid-column: 1;" class="imageBox">
                     <img id="clothingLabel"src="images/item/label.png">
                 </div>
@@ -400,12 +405,12 @@
                 
                 <div class="humanText" id="humanText2">
                     <h1>Paying living wages to  garment workers would add just</h1>
-                    <h4 id="onePercent" style="margin-bottom: 1.5vw;">one percent</h4>
+                    <h4 id="onePercent">one percent</h4>
                     <h1> on average to the retail price of a piece of clothing.</h1>
                 </div>
                 
                 <div class="humanText" id="humanText3">
-                    <h4 id="nineOutOfTen" style="margin-bottom: 1.5vw;"> Nine out of ten workers </h4>
+                    <h4 id="nineOutOfTen"> Nine out of ten workers </h4>
                     <h1>  interviewed in Bangladesh cannot afford enough food for 
                         themselves and their families, forcing them to regularly skip meals and eat 
                         inadequately, or go into debt.
@@ -495,9 +500,9 @@
 
 
         <section id="benefits">
-            <div class="sectionContents overlap-contents text-center" style="margin: 0 8vw 0 9vw;">
+            <div id="benefitsSection" class="sectionContents overlap-contents text-center">
                 <h1 id="benefitsText1">
-                    Buying second hand means that
+                    Buying second hand means
                 </h1>
 
                 <div class="benefitsTextBox" id="benefits1">
@@ -553,11 +558,14 @@
                     <div data-depth="0.1" style="z-index: -3;">
                         <img id="mapImg" src="images/item/map.png">
                     </div>
-                    <div data-depth="0.15" style="z-index: -3;">
+                    <div data-depth="0.15" style="z-index: -1;">
                         <img id="bookImg" src="images/item/book.png">
                     </div>
                     <div data-depth="0.15" style="z-index: -3;">
                         <img id="map2Img" src="images/item/map2.png">
+                    </div>
+                    <div data-depth="0.125" style="z-index: -2;">
+                        <img id="compassImg" src="images/item/compass.png">
                     </div>
                 </div>
 

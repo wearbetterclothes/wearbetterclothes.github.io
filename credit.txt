@@ -1,0 +1,184 @@
+Images Attribution
+
+cleanPNG
+https://www.cleanpng.com/
+(public domain license CC0)
+
+pixnio
+https://pixnio.com/
+(public domain license CC0)
+
+needpix
+https://www.needpix.com/
+(public domain license CC0)
+
+pxhere
+https://pxhere.com/
+(public domain license CC0)
+
+peakpx
+http://www.peakpx.com/
+(public domain license CC0)
+
+unsplash
+https://unsplash.com/
+(public domain license CC0)
+
+purePNG
+https://purepng.com/
+(public domain license CC0)
+
+
+http://pngimg.com/
+(CC licence 4.0: https://creativecommons.org/licenses/by/4.0/)
+
+
+
+header:
+	jeans
+	URL: http://pngimg.com/download/5747
+	
+	sweater
+	URL: http://pngimg.com/download/53282
+
+
+intro section:
+	Title: Crown of King Cedric Rolfsson of An Tir 
+	Author: Duke Torgul Stangrumson
+	URL: https://www.flickr.com/photos/jeff-godfrey/2275576994
+	CC License (2.0): https://creativecommons.org/licenses/by-nc/2.0/
+	Modified: removed background
+
+	Title: File:Modelli di coppole.jpg
+	Author: Teno85
+	URL: https://commons.wikimedia.org/wiki/File:Modelli_di_coppole.jpg
+	CC License (4.0): https://creativecommons.org/licenses/by-sa/4.0/deed.en
+	Modified: removed background	
+
+	plastic bag
+	URL: http://pngimg.com/download/81777
+
+	green bin
+	URL: http://pngimg.com/download/21721
+
+	Title: File:EpicEarth-Globespin-tilt-23.4.gif
+	Author: NASA/EPIC, edit by Tdadamemd
+	URL: https://commons.wikimedia.org/wiki/File:EpicEarth-Globespin-tilt-23.4.gif
+	CC license: CC0	
+
+
+co2 section:
+	clouds
+	URL: http://pngimg.com/download/4318
+	URL: http://pngimg.com/download/4323
+	URL: http://pngimg.com/download/4317
+	URL: http://pngimg.com/uploads/cloud/cloud_png28.png
+	URL: http://pngimg.com/uploads/cloud/cloud_png0.png
+	URL: http://pngimg.com/uploads/cloud/cloud_png31.png
+
+	Title: File:Laundry symbols with japanese.jpg
+	Author: Dvortygirl
+	URL: https://commons.wikimedia.org/wiki/File:Laundry_symbols_with_japanese.jpg
+	CC License (3.0): https://creativecommons.org/licenses/by-sa/3.0/deed.en
+	Modified: removed background, rearranged labels
+
+	sewing machine
+	URL: http://pngimg.com/download/49945
+
+	truck
+	URL: http://pngimg.com/download/16266
+
+	washing machine
+	URL: http://pngimg.com/download/15608
+
+
+water section:
+	Title: Glass of Milk
+	Author: NIAID
+	URL: https://www.flickr.com/photos/niaid/33657535532/in/photostream/
+	CC license (2.0): https://creativecommons.org/licenses/by/2.0/
+
+
+microfiber section:
+	Title: IMG_0194 - Surasi Kusolwong's Golden Ghost (The Future Belongs To Ghosts). MoMA PS1.
+	Author: Paolo C.
+	URL: https://www.flickr.com/photos/pacocco/6886664114/
+	CC license (2.0): https://creativecommons.org/licenses/by-nc-sa/2.0/	
+	Modified: removed background
+
+Fast fashion workers section:
+
+	Title: Thread PNG image with transparent background
+	URL: http://pngimg.com/download/49891
+
+	Title: Thread PNG image with transparent background
+	URL: http://pngimg.com/download/49919
+	
+	Title: Thread PNG image with transparent background	
+	URL: http://pngimg.com/download/49849
+
+	Title: Thread PNG image with transparent background
+	URL: http://pngimg.com/download/49885	
+
+	Title: Thread PNG image with transparent background
+	URL: http://pngimg.com/download/49853
+
+	Title: Thread PNG image with transparent background
+	URL: http://pngimg.com/download/49880
+
+	Title: Clothes button PNG image with transparent background
+	URL: http://pngimg.com/download/14130
+
+	Title: Clothes button PNG image with transparent background
+	URL: http://pngimg.com/download/14129
+	
+	Title: Clothes button PNG image with transparent background
+	URL: http://pngimg.com/download/14146
+	
+	Title: Safety pin PNG image with transparent background
+	URL: http://pngimg.com/download/45799
+
+	Title: Safety pin PNG image with transparent background
+	URL: http://pngimg.com/download/45757
+
+	Title: Safety pin PNG image with transparent background
+	URL: http://pngimg.com/download/45753
+
+
+throwaway section:
+
+	knit sweater
+	URL: http://pngimg.com/download/53312
+
+	jersey
+	URL: http://pngimg.com/download/8049
+
+	socks
+	URL: 
+	
+
+
+home page:
+	loupe
+	URL: http://pngimg.com/download/10037
+
+	map2
+	Vintage photo created by freepik - www.freepik.com
+	https://www.freepik.com/free-photos-vectors/vintage
+
+	earth
+	URL: http://pngimg.com/download/25375
+
+
+
+
+Video attribution:
+
+Free Stock Footage by Videezy: http://www.videezy.com
+Videvo: https://www.videvo.net/
+
+
+Information:
+
+https://goodonyou.eco/what-is-fast-fashion/
+
