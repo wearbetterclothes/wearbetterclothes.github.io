@@ -27,12 +27,12 @@
 }
 #exitButton img{
     top: 0.25vw;
-    right: 0.1vw;
 }
 
 #topButton img{
     top: 0.25vw;
-    right: 0.1vw;
+    width: 90%;
+    height: auto;
 }
 
 #navigationBox button:hover{

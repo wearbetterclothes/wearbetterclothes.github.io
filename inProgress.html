@@ -24,9 +24,19 @@
     
             </ul>
         </div>	
-        <h4>SORRY this feature is not available...yet</h4>
-        <h2>please check back later!</h2>
+        <div id="sorry-theres-nothing-here-get-out-of-inspect-element-ha-ha" style="color: white;display: grid; flex-direction: row; justify-content: center; align-items: center;">
+            <h4 data-depth="2">SORRY this feature is not available...yet</h4>
+            <div style="grid-row: 2; margin: 0 auto; display: flex; align-items: center; width: 100%; " data-depth="1">
+                <h2 >please check back later!</h2>
+            </div>
+        </div>
+        
     </section>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene1 = document.querySelector('#sorry-theres-nothing-here-get-out-of-inspect-element-ha-ha');
+        var parallaxInstance1 = new Parallax(scene1);
+    </script>
 </body>
 </html>
