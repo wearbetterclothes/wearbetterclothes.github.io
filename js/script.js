@@ -20,10 +20,10 @@ function scrollToPos(e) {
 
 
 window.onload = () =>{
-    
+
     const preload = document.querySelector(".preload");
     const body = document.querySelector("body");
-   
+
     window.scrollTo(0,0);
 
     preload.classList.add('preload-finish');
@@ -148,7 +148,7 @@ endScene = new ScrollMagic.Scene({
 })
 .setTween(end)
 .addTo(controller);
-    
+
 
 
 benefits.to("#thriftingText", 1, {y:"-100vh"})
@@ -160,7 +160,7 @@ benefitsScene = new ScrollMagic.Scene({
 })
 .setTween(benefits)
 .addTo(controller);
-    
+
 
 
 
@@ -207,7 +207,7 @@ thriftingScene = new ScrollMagic.Scene({
 })
 .setTween(thrifting)
 .addTo(controller);
-    
+
 
 
 
@@ -325,7 +325,8 @@ throwawayPinScene = new ScrollMagic.Scene({
 
 
 
-throwaway.to("#throwawayIntroText", 1, {y:"70vh"}, "first")
+throwaway.from("#throwawayIntroText", 1, {y:"-1vh"}, "first")
+.to("#throwawayIntroText", 1, {y:"50vh"}, "first")
 .to("#throwawayIntroImg", 1, {filter:"brightness(0.75)"}, "first")
 .to("body", 0.00001, {backgroundColor: "#51ab1a"}, "=0.85")
 .from("#sweaterFallImg", 1, {y: "-40vh"}, "last")
@@ -351,7 +352,7 @@ humanCostText2.to("#nineOutOfTen", 0.000001, {color: "#8f0000"})
 
 const humanCostChangeColour2= new ScrollMagic.Scene({
     triggerElement: "#humanText3",
-    triggerHook: 0.25, 
+    triggerHook: 0.25,
 })
 .setTween(humanCostText2)
 .addTo(controller);
@@ -491,6 +492,7 @@ threeYearsWaterPin.from(".miniCup1", 0.00001, {opacity: 0})
 .to(".miniCup1", 1, {opacity: 1})
 .from(".miniCup16", 0.00001, {opacity: 0})
 .to(".miniCup1", 1, {opacity: 1})
+.to(".miniCup1", 3, {opacity: 1})
 
 
 
@@ -501,7 +503,7 @@ threeYearsWaterPin.from(".miniCup1", 0.00001, {opacity: 0})
 threeYearsWaterPinScene = new ScrollMagic.Scene({
     triggerElement: "#threeYearsWater",
     triggerHook: 0,
-    duration: "100%"
+    duration: "150%"
 })
 .setPin("#threeYearsWater")
 .setTween(threeYearsWaterPin)
@@ -564,6 +566,8 @@ const drinkingWaterPinScene = new ScrollMagic.Scene({
 
 cottonWater.to("#cottonWaterText", 2, {y: 275})
 .to("#cottonGrid", 1, {y: 110}, "=-1")
+.to("#cottonImg1", 1, {y: 120}, "=-1")
+.to("#cottonImg3", 1, {y: 120}, "=-1")
 .to("#cottonImg2", 1, {y: 120}, "=-1")
 .to("#cottonImg4", 1, {y: 120}, "=-1");
 
@@ -786,9 +790,9 @@ questionEvolve.to("body", 0.15, {backgroundColor: "black"}, "first")
 .to('#defineFFText3', 0.5, {y: -160}, "first")
 .to('#defineFFText4', 0.5, {y: -200}, "first")
 .to('#defineFFText5', 0.5, {y: -200}, "first")
-.from("#questionEvolveText1", 1, { y: 250}, "first")
-.to("#questionEvolveText1", 1, {y: -1000}, "first")
-.from("canvas", 1, {y: 100}, "first");
+.from("#questionEvolveText1", 1, { y: "50vh"}, "first")
+.to("#questionEvolveText1", 1, {y: "-150vh"}, "first")
+.from("earthGif", 1, {y: 100}, "first");
 
 const questionEvolveScene = new ScrollMagic.Scene({
     triggerElement: "#questionEvolve",
@@ -843,21 +847,21 @@ const defineFFPinScene = new ScrollMagic.Scene({
 
 
 
-massProducePin.to("#shirtsImg1", 3, {y: "-250vh"}, "first")
+massProducePin.to("#shirtsImg1", 3, {y: "-220vh"}, "first")
 .from('#massProducedText', 0.5, {x: "100vw"}, "first")
 .to("#shirtsImg1", 0.00001, {opacity: 0}, "second")
 .from("#bagImg", 0.00001, {opacity: 0}, "second")
 .from("#shirtsImg2", 0.00001, {opacity: 0}, "second")
 .from("#shirtsImg2", 3, {y: "-450vh"}, "second")
-.to("#shirtsImg2", 2, {y: "50vh"}, "second")
-.from("#bagImg", 1, {y: "100vh"}, "second")
+.to("#shirtsImg2", 4, {y: "50vh"}, "second")
+.from("#bagImg", 2, {y: "100vh"}, "second")
 .from('#massPurchasedText', 0.5, {x: "100vw"}, "second")
 .from('#massAndText', 0.0001, {opacity: 0}, "=-0.5")
 .to("#bagImg", 3, {y: "-200vh"}, "third")
 .from("#shirtsImg3", 0.00001, {opacity: 0}, "third")
-.from("#shirtsImg3", 3, {y: "-450vh"}, "=-1.5")
-.from("#massBinText", 0.5, {x: "100vw"}, "=-1.5")
-.from('#binImg', 1, {y: "50vh"}, "=-2.5")
+.from("#shirtsImg3", 3, {y: "-450vh"}, "=-2.5")
+.from("#massBinText", 0.5, {x: "100vw"}, "=-2.5")
+.from('#binImg', 1, {y: "60vh"}, "=-2.5")
 .from('#binLidImg', 1, {transform: "translateX(-100vw) translateY(-200vh) rotate(-90deg"}, "fourth ")
 .to("#bagImg", 0.00001, {opacity: 0}, "fourth")
 .to("#shirtsImg3", 1, {opacity: "0"}, "fourth")

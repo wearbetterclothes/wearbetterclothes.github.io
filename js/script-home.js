@@ -10,7 +10,7 @@ var parallaxInstance1 = new Parallax(scene1);
 window.onload = () =>{
     const preload = document.querySelector(".preload");
     const body = document.querySelector("body");
-   
+
 
     preload.classList.add('preload-finish');
     body.style.overflowY = "scroll";
