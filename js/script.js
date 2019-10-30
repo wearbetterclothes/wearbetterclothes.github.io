@@ -18,61 +18,6 @@ function scrollToPos(e) {
 
 
 
-var facts = [
-       "Eighty billion pieces of clothing are consumed globally every year.",
-       " One-in-six people work in the global fashion industry.",
-       "Australian’s are the world’s second largest consumers of fashion. On average, they consume 27kgs of new clothing and textiles every year.",
-       " Approximately 7,000 liters of water are needed to produce one pair of jeans (the amount of water one individual drinks in 5-6 years).",
-       " Only 10% of the clothes people donate to thrift stores or charities get sold, the rest goes to landfill.",
-       "Fast fashion companies design clothes to become unfashionable, wear out, fall to pieces easily to force consumers to keep buying new clothes." ,
-       "Clothing made from polyester can take up to 200 years to break down.",
-       "Farmers in China close to garment factories ‘joke’ about being able to tell what colour will be ‘in’ next season by looking at the shade of their rivers",
-       "Only 9 percent of Australian fashion brands pay their workers a living wage.",
-       "Fashion brands continue to use far more virgin resources than recycled ones.",
-       "Fashion’s consumption of resources – especially water and oil – is projected to double by 2030"
-   ];
-
-
-
-   function shuffle(array) {
-       var currentIndex = array.length, temporaryValue, randomIndex;
-
-   // While there remain elements to shuffle...
-
-   while (0 !== currentIndex) {
-       // Pick a remaining element...
-       randomIndex = Math.floor(Math.random() * currentIndex);
-       currentIndex -= 1;
-       // And swap it with the current element.
-       temporaryValue = array[currentIndex];
-       array[currentIndex] = array[randomIndex];
-       array[randomIndex] = temporaryValue;
-   }
-
-
-   return array;
-
-   }
-
-   facts = shuffle(facts);
-   var i = 0;
-
-   setInterval(function(){
-     var factsText = document.querySelector('#changeText');
-     factsText.textContent = facts[i];
-     console.log(factsText);
-       if(i < facts.length){
-           i++;
-           factsText.textContent = facts[i];
-       }
-       else{
-           i = 0;
-           facts = shuffle(facts);
-       }
-   }, 6000);
-
-
-
 window.onload = () =>{
 
     const preload = document.querySelector(".preload");
@@ -620,8 +565,7 @@ const drinkingWaterPinScene = new ScrollMagic.Scene({
 
 cottonWater.to("#cottonWaterText", 2, {y: 275})
 .to("#cottonGrid", 1, {y: 110}, "=-1")
-.to("#cottonImg1", 1, {y: 120}, "=-1")
-.to("#cottonImg3", 1, {y: 120}, "=-1")
+.to("#cottonGrid", 1, {x: 1}, "=-1")
 .to("#cottonImg2", 1, {y: 120}, "=-1")
 .to("#cottonImg4", 1, {y: 120}, "=-1");
 
