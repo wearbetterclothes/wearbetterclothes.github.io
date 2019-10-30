@@ -28,12 +28,12 @@
 
 }
 #exitButton img{
-    top: 0.2vw;
+    top: 0.1vw;
     height: 90%;
 }
 
 #topButton img{
-    top: 0.2vw;
+    top: 0.1vw;
     width: 90%;
     height: auto;
 }
@@ -121,6 +121,9 @@ button{
     border-radius: 80px;
     font-size: 1.1vw;
     outline: none;
+    width: 40%;
+    margin: 0 1vw;
+    padding-top: 0.2vw;
 }
 
 button:hover{
@@ -1234,9 +1237,6 @@ video{
     margin: 0 auto;
 }
 
-#thriftShopFinder h1{
-    width: 90%;
-}
 
 
 #findThriftStore{
